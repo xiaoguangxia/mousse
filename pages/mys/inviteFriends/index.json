@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "poster": "wxa-plugin-canvas/poster",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "navigationBarTitleText": "邀请好友"
+}

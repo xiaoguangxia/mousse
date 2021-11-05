@@ -1,0 +1,103 @@
+<!--搜索商品-->
+<view class="searchPage-main">
+  <view class="sea-inpu">
+    <input value="{{shaixuan.keyword}}" type="text" bindinput='changeSearch' placeholder="请输入关键字搜索" />
+    <button bindtap="searchHandle">搜索</button>
+  </view>
+  <!-- 搜索结果 -->
+  <block wx:if="{{shaixuan.keyword && seaValBool}}">
+    <view class="setMeal-container">
+      <!-- 规格详情筛选 -->
+      <scroll-view wx:if="{{ascListType.length>0}}" class="search-type" scroll-x >
+        <view wx:for="{{ascListType}}" wx:key="*this" data-value="{{item}}" bindtap="searchClick"  class="scroll-view-item {{item.title==searchVal?'on':''}}">
+          {{item.title}}
+          <image wx:if="{{item.title==searchVal}}" class="icon1"  mode="widthFix" src="{{wLink}}/images/sc-top.png"></image>
+          <image wx:else class="icon1"  mode="widthFix" src="{{wLink}}/images/sx-bottom.png"></image>
+        </view>
+      </scroll-view>
+      <!-- 筛选条件 -->
+      <view wx:if="{{searchBool}}" class="sxtj">
+        <!-- 户型筛选 -->
+        <block wx:if="{{searchVal=='户型'}}">
+          <view class="hx" wx:for="{{ascListTypeVal}}" wx:key="*this">
+            <view class="sea-title">户型</view>
+            <view class="sea-box">
+              <view  data-item="{{item}}" bindtap="ascHandle"  class="box {{item.id==seaObject[searchVal].id?'on':''}}">{{item.name}}</view>
+            </view>
+          </view>
+        </block>
+        <!-- 货期，颜色 -->
+        <block  wx:elif="{{searchVal=='货期' || searchVal=='颜色'}}">
+          <view wx:for="{{ascListTypeVal}}" bindtap="ascHandle" wx:key="*this"  data-item="{{item}}"  class="fg {{item.keyword==seaObject[searchVal].keyword?'on':''}}">
+            <text wx:if="{{searchVal=='货期'}}">{{item.keyword}}天之内</text>
+            <text wx:else>{{item.keyword}}</text>
+            <van-icon wx:if="{{item.keyword==seaObject[searchVal].keyword}}"   color="#F59359" size="26rpx" name="success" />
+          </view>
+        </block>
+        <!-- 筛选 -->
+        <block  wx:else>
+          <view wx:for="{{ascListTypeVal}}" bindtap="ascHandle" wx:key="*this"  data-item="{{item}}"  class="fg {{item.id==seaObject[searchVal].id?'on':''}}">
+            <text>{{item.name}}</text>
+            <van-icon wx:if="{{item.id==seaObject[searchVal].id}}"   color="#F59359" size="26rpx" name="success" />
+          </view>
+        </block>
+        
+        <!--  -->
+        <!-- 按钮 -->
+        <view class="btn-group">
+          <button class="reset" bindtap="resetData">重置</button>
+          <button bindtap="cfmClick" class="saveSear">确定</button>
+        </view>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <view class="search-list">
+      <block wx:if="{{shopList.length>0}}">
+        <view wx:for="{{shopList}}"   wx:key="*this" class="search-item">
+          <image wx:if="{{item.image}}" class="img" src="{{domain+item.image}}"></image>
+          <image wx:else class="img" src="{{wLink}}/images/zy1.png"></image>
+          <view class="title">{{item.name}}</view>
+          <view class="money">￥{{item.price}}</view>
+        </view>
+      </block>
+      <!-- 没有数据 -->
+      <block wx:else>
+        <view  class="nodata">
+          <image  src="{{wLink}}/images/plea-no-data.png"></image>
+          <view class="text">暂无数据</view>
+        </view>  
+      </block>
+    </view>
+  </block>
+  <!-- 搜索提示 -->
+  <block wx:else>
+    <!-- 历史 -->
+    <block wx:if="{{historyList.length>0}}">
+      <view class="title-group">
+        <text>历史</text>
+        <van-icon bindtap="removeHistory" size="30rpx" color="#707070" name="delete-o" />
+      </view>
+      <view class="tag-group">
+        <view wx:for="{{historyList}}" data-val="{{item}}" bindtap="historyHandle"  wx:key="*this" class="tag-item">{{item}}</view>
+      </view>
+    </block>
+    <!-- 发现 -->
+    <view class="title-group">
+      <text>发现</text>
+    </view>
+    <view class="tag-group">
+      <view wx:for="{{findList}}"  data-val="{{item.keyword}}" bindtap="historyHandle"  wx:key="*this" class="tag-item">{{item.keyword}}</view>
+    </view>
+    <!-- 热搜榜 -->
+    <view class="title-group">
+      <image class="img" src="{{wLink}}/images/hot.png"></image>
+      <text>热搜榜</text>
+    </view>
+    <view class="label-group">
+      <view wx:for="{{hotList}}"   data-val="{{item.keyword}}" bindtap="historyHandle" class="label-item">
+        <view class="num">{{index+1}}</view>{{item.keyword}}
+      </view>
+    </view>
+  </block>
+</view>
+

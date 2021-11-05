@@ -1,0 +1,264 @@
+/* 我的 */
+.my-main{
+
+}
+.my-main .bg{
+  width: 100%;
+  height: 820rpx;
+}
+/* 用户基础消息信息 */
+.my-main .userinfo{
+  margin: -314rpx auto 40rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 3rpx 20rpx rgba(236, 232, 232, 0.4);
+  width: 690rpx;
+  height: 442rpx;
+  border-radius: 14rpx;
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-main .userinfo .myimg{
+  width: 176rpx;
+  height: 176rpx;
+  border: 8rpx solid #ffffff;
+  box-shadow: 0px 3rpx 20rpx rgba(236, 232, 232, 0.84);
+  border-radius: 50%;
+  margin: -76rpx auto 0;
+}
+.my-main .userinfo .user-type{
+  width: 110rpx;
+  height: 40rpx;
+  background: #F59359;
+  margin: -20rpx auto 20rpx;
+  border-radius: 4rpx;
+  font-size: 22rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 40rpx;
+  padding:0rpx 10rpx;
+  box-sizing: border-box;
+  color: #FFFFFF;
+}
+.my-main .userinfo .name{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 20rpx;
+}
+.my-main .userinfo .name image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+}
+.my-main .userinfo .ID{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+  margin-bottom: 40rpx;
+}
+.my-main .userinfo .user-mess{
+  display: flex;
+  width: 100%;
+  padding: 0 48rpx;
+  box-sizing: border-box;
+}
+.my-main .userinfo .user-mess .mess-item{
+  text-align: center;
+}
+.my-main .userinfo .user-mess .mess-item:nth-child(2){
+  margin-right: 156rpx;
+  margin-left: auto;
+}
+.my-main .userinfo .user-mess .mess-item .bold{
+  font-size: 36rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 26rpx;
+}
+.my-main .userinfo .user-mess .mess-item .text{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+}
+.my-main .userinfo .user-mess .shop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F59359;
+  width: 170rpx;
+  height: 68rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #FFFFFF;
+}
+.my-main .userinfo .user-mess .shop image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  
+}
+/* 订单 */
+.order-main{
+  box-sizing: border-box;
+  padding: 0 30rpx 40rpx;
+}
+.order-main .title-group{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.order-main .title-group .title{
+  font-size: 34rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #303133;
+}
+.order-main .title-group .right{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+  margin-right: 5rpx;
+  display: flex;
+  align-items: center;
+  margin-left:auto ;
+}
+.order-main .title-group .right image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.order-main .order-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 690rpx;
+  height: 364rpx;
+  background: #FFFFFF;
+  box-shadow: 0rpx 3rpx 20rpx rgba(236, 232, 232, 0.4);
+  border-radius: 14rpx;
+  font-size: 0;
+}
+.order-main .order-list .order-item{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 12rpx 0 30rpx;
+}
+.order-main .order-list .order-item:nth-child(1){
+  border-right: 2rpx solid #f8f8f8;
+  border-bottom: 2rpx solid #f8f8f8;
+}
+.order-main .order-list .order-item:nth-child(4){
+  border-left: 2rpx solid #f8f8f8;
+  border-top: 2rpx solid #f8f8f8;
+}
+.order-main .order-list .order-item .left{
+  margin-right: 60rpx;
+  text-align: left;
+  flex: 1;
+  box-sizing: border-box;
+}
+.order-main .order-list .order-item .left .order-item-title{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 10rpx;
+}
+.order-main .order-list .order-item .left .num{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #999999;
+}
+.order-main .order-list .order-item .order-item-img{
+  width: 150rpx;
+  height: 90rpx;
+}
+/* 常用功能 */
+.comm-main{
+  box-sizing: border-box;
+  padding: 0 30rpx 163rpx;
+}
+.comm-main .title-group{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.comm-main .title-group .title{
+  font-size: 34rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #303133;
+}
+.comm-main .title-group .right{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+  margin-right: 5rpx;
+  display: flex;
+  align-items: center;
+  margin-left:auto ;
+}
+.comm-main .title-group .right image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.comm-main  .comm-list{
+  width: 690rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40rpx 40rpx 0;
+  background: #FFFFFF;
+  box-shadow: 0rpx 3rpx 20rpx rgba(236, 232, 232, 0.4);
+  border-radius: 14rpx;
+  box-sizing: border-box;
+}
+.comm-main  .comm-list .comm-item{
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 75rpx;
+}
+.comm-main  .comm-list .comm-item:nth-child(4n+4) {
+  margin-right: 0;
+}
+.comm-main  .comm-list .comm-item .comm-img{
+  width: 42rpx;
+  height: 42rpx;
+  margin-bottom: 20rpx;
+}
+.comm-main  .comm-list .comm-item .text{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+}
+rice-text img,rice-text image{
+  max-width: 100%;
+}

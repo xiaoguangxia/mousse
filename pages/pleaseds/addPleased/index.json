@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "standards":"../../components/standards/index",
+    "style":"../../components/style/index",
+    "plan":"../../components/plan/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-button": "@vant/weapp/button/index",
+    "searchPlan":"../../components/searchPlan/index",
+    "savePlan":"../../components/savePlan/index"
+  },
+  "navigationBarTitleText": "我的方案"
+}

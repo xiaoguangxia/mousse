@@ -1,0 +1,17 @@
+<!--pages/home/goodsSquared/index.wxml-->
+<!-- 一键九宫格 -->
+<view class="jiu-main">
+  <view class="jiu-container">
+    <view class="jiu-group">
+      <rich-text nodes="{{htmlSnip}}"></rich-text>
+    </view>
+  </view>
+  <!-- 图片数组 -->
+  <view class="img-group">
+    <image wx:for="{{list}}" wx:if="{{index<9}}" wx:key="*this"  src="{{domain+item}}"></image>
+  </view>
+  <!-- 保存分享朋友圈 -->
+  <view class="btn-tool">
+    <button bindtap="saveImageText">批量保存图片，去朋友圈分享</button>
+  </view>
+</view>

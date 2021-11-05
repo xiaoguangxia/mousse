@@ -1,0 +1,23 @@
+<!--套餐列表-->
+<view class="setMeal-container">
+  <van-tabs sticky id="tabs" sticky active="{{ active }}" bind:change="tabChange">
+    <van-tab   wx:for="{{tabMenuArr}}" name="{{item.id}}" wx:key="*this" title="{{item.name}}">
+      <!-- 无数据 -->
+      <view wx:if="{{list.length==0}}" class="nodata">
+        <image  src="{{wLink}}/images/plea-no-data.png"></image>
+        <view class="text">暂无数据</view>
+      </view>  
+      <block wx:else>
+        <view  class="card-info" wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" bindtap="toDetail">
+          <image class="list-image" src="{{domain+item.image}}"></image>
+          <view class="small-text">{{item.name}}</view>
+          <view class="money">
+            <text class="num">￥{{item.price}}</text>
+            <image mode="widthFix" src="{{wLink}}/images/setMeal-right.png"></image>
+          </view>
+        </view>
+      </block>
+    </van-tab>
+  </van-tabs>
+</view>
+

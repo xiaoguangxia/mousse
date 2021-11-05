@@ -1,0 +1,35 @@
+<!-- 户型库列表 -->
+<view class="house-main">
+  <view class="search-box">
+    <view class="inp">
+      <image src="{{wLink}}/images/search-icon.png"></image>
+      <input value="{{keyword}}" bindinput="inpchange" class="input"  placeholder="输入您想要的户型"/>
+    </view>
+    <text class="search-text" bindtap="pullDataList">搜索</text>
+  </view>
+  <!-- 分类选项 -->
+  <view class="setMeal-container">
+    <van-tabs  id="tabs" sticky active="{{ active }}" bind:change="tabsChange">
+      <van-tab  wx:for="{{tabMenuArr}}" wx:for-item="fitem" wx:key="*this"  name="{{fitem.id}}" title="{{fitem.name}}">
+        <scroll-view class="goodslist-type" scroll-x >
+          <view wx:for="{{chilType}}" wx:key="*this" bindtap="chilSearch" data-id="{{item.id}}"  class="scroll-view-item {{childActive==item.id?'on':''}}">{{item.name}}</view>
+        </scroll-view>
+        <view  wx:if="{{list.length==0}}" class="nodata">
+          <image  src="{{wLink}}/images/plea-no-data.png"></image>
+          <view class="text">暂无数据</view>
+        </view>  
+        <!-- 列表 -->
+        <view wx:else class="house-list">
+          <view wx:for="{{list}}" wx:key="*this" class="house-item" data-id="{{item.id}}" bindtap="toHouseDetail">
+            <image wx:if="{{item.image}}" src="{{domain+item.image}}"></image>
+            <image wx:else src="{{wLink}}/images/house.png"></image>
+            <view class="text">
+              <view class="title">{{item.name}}</view>
+              <view class="des">{{item.description}}</view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-button": "@vant/weapp/button/index",
+    "poster": "wxa-plugin-canvas/poster",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "standards":"../../components/standards/index",
+    "style":"../../components/style/index",
+    "plan":"../../components/plan/index",
+    "searchPlan":"../../components/searchPlan/index",
+    "savePlan":"../../components/savePlan/index"
+  },
+  "navigationBarTitleText": "方案详情"
+}

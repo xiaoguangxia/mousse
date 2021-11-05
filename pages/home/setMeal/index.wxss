@@ -1,0 +1,83 @@
+/* pages/home/setMeal/index.wxss */
+page{
+  background-color: #FFFFFF;
+}
+.setMeal-container{
+
+}
+.setMeal-container .nodata{
+  margin: 318rpx auto auto;
+  text-align: center;
+}
+.setMeal-container .nodata image{
+  width: 304rpx;
+  height: 304rpx;
+  margin-bottom: 30rpx;
+}
+.setMeal-container .nodata .text{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  text-align: center;
+}
+.setMeal-container .van-tabs__nav {
+  border-bottom: 2rpx solid #F8F8F8;
+}
+.setMeal-container .van-tab{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  flex-basis: auto !important;
+  padding:30rpx;
+}
+.setMeal-container .van-tab.van-tab--active{
+  font-weight: 600;
+}
+.setMeal-container .van-tabs__line{
+  width: 56rpx !important;
+  border-radius: 8rpx;
+  height: 6rpx;
+  background-color: #141414;
+}
+/* 列表有数据 */
+.card-info{
+  width: 690rpx;
+  box-shadow: 0rpx 3rpx 20rpx #ECE8E8;
+  border-radius: 8rpx;
+  margin: 30rpx auto;
+}
+.card-info .list-image{
+  width: 100%;
+  height: 530rpx;
+}
+.card-info .small-text{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #333333;
+  padding: 30rpx;
+  letter-spacing: 4rpx;
+}
+.card-info .money{
+  display: flex;
+  align-items: center;
+  padding:0rpx  30rpx 40rpx 30rpx;
+}
+.card-info .money .num{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #F59359;
+  letter-spacing: 2rpx;
+}
+.card-info .money image{
+  width: 14rpx;
+  height: 14rpx;
+  margin-left: auto;
+}

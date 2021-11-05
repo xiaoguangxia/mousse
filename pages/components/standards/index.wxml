@@ -1,0 +1,39 @@
+<!--pages/components/standards/index.wxml-->
+<!-- 自定义规格组件 -->
+<view class="compon-standards">
+  <view class="h"></view>
+  <view class="info">
+    <image wx:if="{{chilObj.image!=''}}" class="shop-img"  src="{{domain+chilObj.image}}"></image>
+    <image wx:else class="shop-img"  src="{{wLink}}/images/tj1.png"></image>
+    <view class="price" wx:if="{{chilObj.saleswitch==1}}">￥{{chilObj.sale_price}}</view>
+    <view class="price" wx:else>￥{{chilObj.price}}</view>
+    <view class="shop-name">{{chilObj.name}}</view>
+    <image bindtap="closeStandards" class="close"  src="{{wLink}}/images/close.png"></image>
+  </view>
+  <!-- 规格选项 -->
+  <view class="ggcc">
+    <block wx:for="{{spec_list}}" wx:key="*this" wx:for-index="idx" wx:for-item="chi">
+      <view class="shop-title">{{chi.name}}</view>
+      <view class="ggcc-items">
+        <view wx:for="{{chi.child}}" catchtap="checkSpeHandle" data-fidx="{{idx}}" data-idx="{{index}}"  wx:key="index" class="items-child {{chi.sidx==index?'on':''}}">{{item}}</view>
+      </view>
+    </block>
+    <!-- 数量 -->
+    <view class="count-group">
+      <view class="shop-title">数量</view>
+      <view class="mone-ico">
+        <view class="jian {{num<=1?'on':''}}" data-index="{{index}}" bindtap="removeNum">
+          <image   src="{{wLink}}/images/jian.png"></image>
+        </view>
+        <view class="num">{{num}}</view>
+        <view class="jia" bindtap="addNum"   data-index="{{index}}">
+          <image   src="{{wLink}}/images/jia.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 确定已选规格 -->
+  <view class="btn-tool">
+    <button bindtap="saveShopping">确定</button>
+  </view>
+</view>

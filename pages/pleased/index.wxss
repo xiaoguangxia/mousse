@@ -1,0 +1,152 @@
+/* 随心搭 */
+.pleased-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.pleased-main .top-add-plea{
+  font-size:0 ;
+  text-align: center;
+  width: 750rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 3rpx 6rpx rgba(236, 232, 232, 0.4);
+  border-radius: 0rpx 0rpx 40rpx 40rpx;
+  padding: 20rpx 20rpx 40rpx;
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+}
+.pleased-main .top-add-plea image{
+  margin: 0 auto;
+  width: 98rpx;
+  height: 98rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+.pleased-main .top-add-plea  .text{
+  text-align: center;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+}
+.pleased-main .tab-type{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0rpx 30rpx;
+  white-space:nowrap;
+  font-size: 0;
+}
+.pleased-main .tab-type .child{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  padding-bottom: 26rpx;
+  margin-right: 60rpx;
+  display: inline-block;
+}
+.pleased-main .tab-type .child.on{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  position: relative;
+}
+.pleased-main .tab-type .child.on .bd-line{
+  position: absolute;
+  width: 56rpx;
+  left: 0;
+  bottom: 0;
+  height: 6rpx;
+  background: #141414;
+  border-radius: 8rpx;
+}
+/* 列表模块 */
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30rpx 30rpx 0rpx;
+  box-sizing: border-box;
+}
+.list .item-flex{
+  width: 336rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  font-size: 0;
+  background-color: #FFFFFF;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.list .item-flex:nth-child(odd){
+  margin-right: 18rpx;
+}
+
+.list .item-flex .ban_{
+  width: 100%;
+  height: 334rpx;
+  margin-bottom: 20rpx;
+}
+.list  .item-flex .title{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height:1;
+  color: #333333;
+  margin-bottom: 30rpx;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.list  .item-flex .tool-bott{
+  display: flex;
+  align-items: center;
+  font-size: 0;
+  padding: 0 20rpx;
+}
+.list  .item-flex .tool-bott .left{
+  margin-right: auto;
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+.list  .item-flex .tool-bott .left image{
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.list  .item-flex .tool-bott .right{
+  font-size: 22rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+.list  .item-flex .tool-bott .right image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}
+.list  .item-flex .tool-bott .left .tx{
+  width: 130rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}

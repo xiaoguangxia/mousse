@@ -1,0 +1,111 @@
+/* pages/mys/addressList/index.wxss */
+page{
+  background: #FFFFFF;
+}
+.address-main{
+  display: flex;
+  flex-direction: column;
+  padding:0 30rpx 150rpx;
+}
+.address-main .addre-list{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F5F5F5;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+.address-main .addre-list .left{
+  margin-right: auto;
+}
+.address-main .addre-list .left .top{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.address-main .addre-list .left .top .name{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+  margin-top: 28rpx;
+}
+.address-main .addre-list .left .top .phone{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 28rpx;
+  margin-left: 30rpx;
+  margin-right: 5rpx;
+}
+.address-main .addre-list .left .top button{
+  width: 70rpx;
+  height: 40rpx;
+  background: #141414;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.address-main .addre-list .left .top button::after{
+  border: none;
+}
+.address-main .addre-list .left .bottom{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+}
+.address-main .addre-list .address-img{
+  width: 42rpx;
+  height: 42rpx;
+}
+.btn-group{
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 120rpx;
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EFEFEF;
+  box-sizing: border-box;
+}
+.btn-group button{
+  width: 610rpx;
+  height: 90rpx;
+  background: #141414;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF
+}
+/* 没有数据 */
+.address-main .nodata{
+  margin: 175rpx auto auto;
+}
+.address-main .nodata image{
+  width: 304rpx;
+  height: 304rpx;
+  margin-bottom: 30rpx;
+}
+.address-main .nodata .text{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  text-align: center;
+}

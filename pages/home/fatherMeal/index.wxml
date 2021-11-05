@@ -1,0 +1,21 @@
+
+<view class="father-meal">
+  <view class="page-section2">
+  <!-- 无数据 -->
+  <view wx:if="{{list.length==0}}" class="nodata">
+    <image  src="{{wLink}}/images/plea-no-data.png"></image>
+    <view class="text">暂无数据</view>
+  </view> 
+  <block wx:else>
+    <block wx:for="{{list}}" wx:for-index="idx" wx:key="*this">
+      <view class="swp-item" data-id="{{item.id}}" bindtap="toSetMealList" >
+        <image  src="{{domain+item.image}}"></image>
+        <view class="text">
+          <view class="h3">{{item.name}}</view>
+          <view class="dec">{{item.description}}</view>
+        </view>
+      </view>
+    </block>
+  </block>
+  </view>
+</view>

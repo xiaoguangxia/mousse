@@ -1,0 +1,110 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/index",
+    "pages/pleased/index",
+    "pages/classify/index",
+    "pages/houseList/index",
+    "pages/my/index"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/home",
+      "pages": [
+        "detail/index",
+        "setMealDetail/index",
+        "setMeal/index",
+        "fatherMeal/index",
+        "goodsList/index",
+        "goodsSquared/index",
+        "goodsDetail/index"
+      ]
+    },
+    {
+      "root": "pages/pleaseds",
+      "pages": [
+        "addPleased/index",
+        "pleasedDetail/index"
+      ]
+    },
+    {
+      "root": "pages/classifys",
+      "pages": [
+        "searchPage/index"
+      ]
+    },
+    {
+      "root": "pages/house",
+      "pages": [
+        "detail/index"
+      ]
+    },
+    {
+      "root": "pages/mys",
+      "pages": [
+        "userInfo/index",
+        "inviteFriends/index",
+        "collect/index",
+        "tidings/index",
+        "shoppingCart/index",
+        "orderList/index",
+        "orderDetail/index",
+        "orderSave/index",
+        "addressList/index",
+        "addressDetail/index",
+        "myTracks/index",
+        "feedBack/index"
+      ]
+    }
+  ],
+  "tabBar": {
+    "selectedColor": "#141414",
+    "color": "#999999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "商城",
+        "iconPath": "static/images/icon1.png",
+        "selectedIconPath": "static/images/icon1-1.png"
+      },
+      {
+        "pagePath": "pages/classify/index",
+        "text": "分类",
+        "iconPath": "static/images/icon2.png",
+        "selectedIconPath": "static/images/icon2-1.png"
+      },
+      {
+        "pagePath": "pages/pleased/index",
+        "text": "随心搭",
+        "iconPath": "static/images/icon3.png",
+        "selectedIconPath": "static/images/icon3-1.png"
+      }
+      ,
+      {
+        "pagePath": "pages/houseList/index",
+        "text": "户型库",
+        "iconPath": "static/images/icon4.png",
+        "selectedIconPath": "static/images/icon4-1.png"
+      }
+      ,
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/images/icon5.png",
+        "selectedIconPath": "static/images/icon5-1.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "家具商场",
+    "navigationBarTextStyle":"black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

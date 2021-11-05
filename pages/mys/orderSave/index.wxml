@@ -1,0 +1,55 @@
+<!-- 提交订单 -->
+<view class="order-detail-main">
+  <!-- 地址信息 -->
+  
+  <view   wx:if="{{addressVal.phone}}"  bindtap="toAddAddress"  class="addre-list">
+    <view class="left">
+      <view class="top">
+        <text class="name">{{addressVal.consignee}}</text>
+        <text class="phone">{{addressVal.phone}}</text>
+        <button wx:if="{{addressVal.default==1}}">默认</button>
+      </view>
+      <view class="bottom">
+        {{addressVal.address}}
+      </view>
+    </view>
+    <!-- <image class="address-img" data-addressVal="{{addressVal}}" catchtap="editAddress" src="{{wLink}}/images/address-edit.png"></image> -->
+  </view>
+  <!--  -->
+  <view wx:else class="address-info" bindtap="toAddAddress">
+    <image class="map"  src="{{wLink}}/images/address-icon.png"></image>
+    <text>您还未设置默认地址，点击添加或设置</text>
+    <image class="icon"  src="{{wLink}}/images/my-right.png"></image>
+  </view>
+  <!-- 基础信息 -->
+  <view class="order-detailT">
+    <view wx:for="{{list}}" wx:key="*this" class="detail">
+      <image  src="{{wLink}}/images/plea1.png"></image>
+      <view class="right-text">
+        <view class="title">{{item.goods.name}}</view>
+        <view class="des">
+          <text wx:if="{{item.goods.period}}">货期{{item.goods.period}}天之内；</text>
+          <text wx:if="{{item.goods.color}}">颜色为{{item.goods.color}}</text>
+          <text wx:if="{{item.goods_sku}}">风格是{{item.goods_sku}}</text>
+        </view>
+        <view class="price">
+          <block wx:if="{{saleswitch==1}}">￥{{item.goods.sale_price}}</block>
+          <block wx:else>￥{{item.goods.price}}</block>
+          <text>X{{item.goods_num}}</text>
+        </view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="small-title">请输入订单备注（选填）</view>
+    <view class="small-text">
+      <textarea value="{{des}}" bindinput="textareaChange"  placeholder="请输入订单备注" />
+    </view>
+  </view>
+  <!--  -->
+  <view  class="bott-toolbar">
+    <view class="total-text">
+      共{{count}}件，合计<text>￥{{totalPrice}}</text>
+    </view>
+    <button bindtap="saveHandle" class="js">提交订单</button>
+  </view>
+</view>

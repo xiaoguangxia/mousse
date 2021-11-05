@@ -1,0 +1,44 @@
+<!-- 新增收货地址 -->
+<view class="addres-detail-main">
+  <view class="row">
+    <text>收货人</text>
+    <input value="{{addressObj.consignee}}" bindinput="texChange" data-type="{{'consignee'}}" type="text" placeholder="请填写收货人姓名" />
+  </view>
+  <view class="row">
+    <text>手机号码</text>
+    <input value="{{addressObj.phone}}"  bindinput="texChange" data-type="{{'phone'}}" type="text" placeholder="请填写收货人手机号码" />
+  </view>
+  <view class="row">
+    <text>选择所在地区</text>
+    <view class="dw" bindtap="selectMap">
+      <block wx:if="{{addressObj.address}}">
+        {{addressObj.province+addressObj.city+(addressObj.city==addressObj.area?'':addressObj.area)}}
+      </block>
+      <block wx:else>
+        请选择
+      </block>
+      
+      <image  src="{{wLink}}/images/address-icon.png"></image>
+    </view>
+  </view>
+  <view class="row on">
+    <text>详细地址</text>
+    <textarea value="{{addressObj.address}}"   bindinput="texChange" data-type="{{'address'}}"  auto-height placeholder="请填写道路、门牌号、小区等" />
+  </view>
+  <view class="row on">
+    <text>设置默认地址</text>
+    <van-checkbox value="{{addressObj.default==1}}"   shape="square" bind:change="checkboxChange"></van-checkbox>
+  </view>
+  <!-- 删除地址 -->
+  <view wx:if="{{addressId}}" class="addre-wx on" bindtap="delAddress">
+    删除
+  </view>
+  <!-- 从微信导入 -->
+  <view wx:else class="addre-wx" bindtap="wxAddress">
+    从微信导入地址
+  </view>
+  <!-- bin -->
+  <view class="btn-group">
+    <button bindtap="saveAddress">保存</button>
+  </view>
+</view>

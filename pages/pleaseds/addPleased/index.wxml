@@ -1,0 +1,57 @@
+<!-- 添加我的方案 -->
+<view class="add-plea-main">
+  <!-- 无数据 -->
+  <view wx:if="{{list.length==0}}" class="nodata">
+    <image  src="{{wLink}}/images/plea-no-data.png"></image>
+    <view class="text">暂无数据</view>
+  </view>  
+  <!-- 方案列表 -->
+  <block wx:else>
+    <view wx:for="{{list}}" wx:key="*this" class="item">
+      <image wx:if="{{item.image}}" class="l-img" src="{{domain+item.image}}"></image>
+      <image wx:else class="l-img" src="{{wLink}}/images/shop1.png"></image>
+      <view class="item-text">
+        <view class="title">{{item.name}}</view>
+        <view class="dz">
+          <image wx:if="{{item.is_zan>0}}" src="{{wLink}}/images/dz-on.png"></image>
+          <image wx:else src="{{wLink}}/images/dz.png"></image>{{item.zan}}
+        </view>
+        <view class="btn-group">
+          <button catchtap="editPleased"  data-index="{{index}}" data-item="{{item}}" class="edit">编辑</button>
+          <button catchtap="delPleased" data-index="{{index}}" data-id="{{item.id}}" class="del">删除</button>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 添加方案按钮 -->
+  <!--  -->
+  <!-- 添加方案少页面，流程需要调整，完成之后删除 -->
+  <view class="add-plea-btnGroup">
+    <button class="add-btn" bindtap="doAddPleaHandle">
+      <image  src="{{wLink}}/images/add-f.png"></image>添加方案
+    </button>
+  </view>
+</view>
+<van-dialog id="van-dialog" />
+<!-- 选择规格参数 -->
+<van-popup class="vant-pop"  data-popval="addShoppingBool" position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ addShoppingBool }}">
+  <standards wx:if="{{ addShoppingBool }}" goodsObj="{{goodsObj}}" bind:saveShopping="saveShopping" bind:closeShopping="closeShopping" ></standards>
+</van-popup>
+<!-- 选择风格 -->
+<van-popup class="vant-pop"  data-popval="styleBool" position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ styleBool }}">
+  <style wx:if="{{ styleBool }}" styleList="{{styleList}}" bind:saveStyleHandle="saveStyleHandle" bind:closeStyle="closeStyle" ></style>
+</van-popup>
+<!-- 选择方案 -->
+<van-popup class="vant-pop"  data-popval="planBool" position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ planBool }}">
+  <plan wx:if="{{ planBool }}" planList="{{planList}}"  standardsList="{{standardsList}}" bind:addGoodsHandle="addGoodsHandle" bind:savePlanHandle="savePlanHandle" ></plan>
+</van-popup>
+<!-- 方案添加更多商品 -->
+<van-popup class="vant-pop"   position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ addGoodsBool }}">
+  <view style="height: 60rpx;background: transparent;"></view>
+  <searchPlan wx:if="{{ addGoodsBool }}" pleased="{{1}}" styleList="{{styleList}}" bind:saveFa="saveFaHandle" planList="{{planList}}" spaceList="{{spaceList}}" bind:closeHandle="closeHandle"  goodOption="{{goodOption}}"   ></searchPlan>
+</van-popup>
+<!-- 提交方案 -->
+<van-popup class="vant-pop"   position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ savePlanBool }}">
+  <savePlan wx:if="{{ savePlanBool }}"  pleasedObj="{{pleasedObj}}" bind:addFangan="addFangan" bind:closeHandle="closeFun"  ></savePlan>
+</van-popup>

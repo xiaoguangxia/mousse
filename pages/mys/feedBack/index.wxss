@@ -1,0 +1,132 @@
+/* 意见反馈 */
+page{
+  background: #FFFFFF;
+}
+.feedBack-main{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx 150rpx;
+}
+.feedBack-main .tips{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #F6935A;
+  margin-bottom: 40rpx;
+}
+.feedBack-main  .feed-group{
+  margin-bottom: 40rpx;
+}
+.feedBack-main  .feed-group .title{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 40rpx;
+}
+.feedBack-main  .feed-group .title .red{
+  color: #F65A5A;
+}
+.feedBack-main  .feed-group  .radio-group{
+  display: flex;
+  align-items: center;
+}
+.feedBack-main  .feed-group textarea{
+  height: 297rpx;
+  border: 1px dashed #F2F2F2;
+  opacity: 1;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  font-size: 26rpx;
+  box-sizing: border-box;
+  color: #141414;
+}
+.feedBack-main  .feed-group .imglist{
+  display: flex;
+  flex-wrap: wrap;
+}
+.feedBack-main  .feed-group .imglist .imgchil{
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 30rpx;
+  border-radius: 8rpx;
+}
+.feedBack-main  .feed-group .imglist .remove{
+  position: absolute;
+  width: 37rpx;
+  height: 37rpx;
+  top: -8rpx;
+  right: -8rpx;
+  border-radius: 50%;
+}
+.feedBack-main  .feed-group .imglist .img{
+  width: 200rpx;
+  height: 200rpx;
+  background: #F4F5F7;
+  border-radius: 8rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 45rpx;
+}
+.feedBack-main  .feed-group .imglist .img.imgs{
+  width: auto;
+  height:auto;
+  background: transparent;
+}
+.feedBack-main  .feed-group .imglist .img:nth-child(3n+3) {
+  margin-right: 0;
+}
+.feedBack-main  .feed-group .imglist .imgchil{
+  width: 200rpx;
+  height: 200rpx;
+}
+.feedBack-main  .feed-group .imglist .feed-img{
+  width: 46rpx;
+  height: 41rpx;
+}
+.van-radio__icon{
+  width: 30rpx !important;
+  height: 30rpx !important;
+}
+.van-radio__label {
+  font-size: 26rpx !important;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1 !important;
+  margin-left: 10rpx !important;
+  color: #666666 !important;
+}
+.btn-group{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding: 10rpx 30rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #EFEFEF;
+}
+.btn-group button{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #141414;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  box-sizing: border-box;
+}
+.btn-group button::after{
+  border: none;
+}

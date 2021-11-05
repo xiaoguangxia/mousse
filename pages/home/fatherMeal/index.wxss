@@ -1,0 +1,59 @@
+/* pages/home/fatherMeal/index.wxss */
+.page-section2{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.page-section2 .swp-item{
+  width: 220rpx;
+  height: 260rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.page-section2 .swp-item image{
+  width:100%;
+  height: 100%;
+  border-radius: 8rpx;
+}
+.page-section2 .swp-item .text{
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  z-index: 58;
+}
+.page-section2 .swp-item .text .h3{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 10rpx;
+}
+.page-section2 .swp-item .text .dec{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+}
+.father-meal .nodata{
+  margin: 318rpx auto auto;
+  text-align: center;
+}
+.father-meal .nodata image{
+  width: 304rpx;
+  height: 304rpx;
+  margin-bottom: 30rpx;
+}
+.father-meal .nodata .text{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  text-align: center;
+}

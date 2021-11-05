@@ -1,0 +1,41 @@
+<!-- 意见反馈 -->
+<view class="feedBack-main">
+  <view class="tips">欢迎您给我们提出系统使用感受和建议！</view>
+  <!--  -->
+  <view class="feed-group">
+    <view class="title">
+      留言类型<text class="red">*</text>
+    </view>
+    <van-radio-group class="radio-group" direction="horizontal" value="{{ type }}" bind:change="onChange">
+      <van-radio name="1"  checked-color="#141414" icon-size="26rpx">功能建议</van-radio>
+      <van-radio name="2"  checked-color="#141414" icon-size="26rpx">产品服务</van-radio>
+      <van-radio name="3"  checked-color="#141414" icon-size="26rpx">故障设施</van-radio>
+      <van-radio name="4"  checked-color="#141414" icon-size="26rpx">其他</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="feed-group">
+    <view class="title">
+      您的留言<text class="red">*</text>
+    </view>
+    <textarea value="{{content}}" bindinput="textChange"  placeholder="您的留言" />
+  </view>
+  <view class="feed-group">
+    <view class="title">
+      上传图片
+    </view>
+    <view class="imglist">
+      <block  wx:if="{{images.length>0}}">
+        <view  wx:for="{{images}}" wx:key="*this" class="img imgs">
+          <image  class="imgchil" src="{{domain+item}}"></image>
+          <image class="remove" data-idx="{{index}}" bindtap="deleteImg" src="{{wLink}}/images/feed-rem.png"></image>
+        </view>
+      </block>
+      <view bindtap="uploadImg"  class="img">
+        <image class="feed-img" src="{{wLink}}/images/feed-img.png"></image>
+      </view>
+      </view>
+  </view>
+  <view class="btn-group">
+    <button bindtap="saveFeedBack" class="saveFeedBack">立即创建</button>
+  </view>
+</view>

@@ -1,0 +1,84 @@
+/* pages/home/goodsSquared/index.wxss */
+/* 一键九宫格 */
+page{
+  background-color: #ffffff;
+}
+.jiu-main{
+  padding: 10rpx 30rpx 120rpx;
+}
+.jiu-main .jiu-container{
+  width: 690rpx;
+  background: #EEEEEE;
+  padding: 40rpx 30rpx;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+.jiu-main .jiu-container .jiu-group{
+  display: flex;
+}
+.jiu-main .jiu-container .jiu-group .lable{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 42rpx;
+  width: 130rpx;
+  color: #141414;
+}
+.jiu-main .jiu-container .jiu-group .text{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  width: 528rpx;
+  line-height: 42rpx;
+  color: #666666;
+  word-break:break-all;
+}
+.jiu-main .jiu-container .line{
+  width: 201rpx;
+  height: 0px;
+  border-top: 1px dashed #141414;
+  margin: 40rpx 0rpx 30rpx;
+}
+.jiu-main .img-group{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60rpx;
+}
+.jiu-main .img-group image{
+  width: 212rpx;
+  height: 216rpx;
+  margin-right: 27rpx;
+  margin-bottom: 30rpx;
+}
+.jiu-main .img-group image:nth-child(3n+3) {
+  margin-right: 0rpx;
+}
+/* 一键保存分享朋友圈 */
+.jiu-main .btn-tool{
+  width: 750rpx;
+  height: 120rpx;
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  padding: 10rpx 70rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.jiu-main .btn-tool button{
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 8rpx;
+  background-color: #141414;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+}
+.jiu-main .btn-tool button::after{
+  border: none;
+}

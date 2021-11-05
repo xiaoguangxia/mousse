@@ -1,0 +1,323 @@
+/* pages/home/setMealDetail/index.wxss */
+.setMeal-detail-main{
+  padding-bottom: 122rpx;
+}
+.setMeal-detail-main .top{
+  background-color: #FFFFFF;
+  padding-bottom: 40rpx;
+}
+.setMeal-detail-main .top .page-section{
+  position: relative;
+}
+.setMeal-detail-main .top .page-section swiper{
+  width: 100%;
+  height: 754rpx;
+}
+.setMeal-detail-main .top .page-section swiper .swp-item image{
+  width: 100%;
+  height: 754rpx;
+}
+/*用来包裹所有的小圆点  */
+ 
+.setMeal-detail-main .top .dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20rpx;
+}
+ 
+/*未选中时的小圆点样式 */
+ 
+.setMeal-detail-main .top .dot {
+  width: 6rpx;
+  height: 6rpx;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+ 
+/*选中以后的小圆点样式  */
+ 
+.setMeal-detail-main .top .swpactive {
+  width: 6rpx;
+  height: 6rpx;
+  background: #141414;
+}
+
+/* 价格 */
+.setMeal-detail-main .top .money{
+  font-size: 40rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #F59359;
+  text-align: center;
+  padding: 80rpx 0rpx 94rpx;
+}
+/* 标题 */
+.setMeal-detail-main .top .title{
+  font-size: 36rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #333333;
+  margin-bottom: 60rpx;
+  text-align: center;
+}
+/* 备注 */
+.setMeal-detail-main .top .des{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 32rpx;
+  color: #666666;
+  text-align: center;
+  padding: 0rpx 30rpx 40rpx;
+}
+.setMeal-detail-main .tbr-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-bottom: 40rpx; */
+}
+.setMeal-detail-main .tbr-container .tbr-item:nth-child(2){
+  margin: 18rpx;
+}
+.setMeal-detail-main .tbr-container .tbr-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 3rpx 20rpx rgba(236, 232, 232, 0.4);
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  width: 218rpx;
+  line-height: 32rpx;
+  padding: 24rpx;
+  color: #666666;
+  box-sizing: border-box;
+}
+
+.setMeal-detail-main .tbr-container .tbr-item image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.setMeal-detail-main .tbr-container .tbr-item:nth-child(2) image{
+  margin-right: 10rpx;
+}
+.setMeal-detail-main .tbr-container .tbr-item .text{
+  flex: 1;
+  white-space:nowrap;
+}
+/* 分享海报 */
+.setMeal-detail-main .poster-main{
+  background-color: #ffffff;
+  border-radius: 0rpx 0rpx 8rpx 8rpx;
+  overflow: hidden;
+}
+.poster-main button{
+  width: 524rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 8rpx;
+  background-color: #141414;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+}
+.poster-main button::after{
+  border: none;
+}
+/* 一键九宫格 */
+.jgg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 691rpx;
+  height: 80rpx;
+  background: #F6F6F6;
+  border-radius: 8rpx;
+  margin: 0 auto;
+}
+.jgg .icon1{
+  width: 40rpx;
+  height: 40rpx;
+}
+.jgg text{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 32rpx;
+  color: #141414;
+  margin: 0 10rpx;
+}
+.jgg .right{
+  width: 20rpx;
+  height: 20rpx;
+}
+/* 套餐商品 bottom */
+.bottom{
+  margin-top: 30rpx;
+  background-color: #ffffff;
+}
+.bottom .check-gp{
+  display: flex;
+  align-items: center;
+  padding: 40rpx 30rpx;
+}
+.bottom .check-gp .title{
+  font-size: 32rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #303133;
+  margin-right: 15rpx;
+}
+.bottom .check-gp .small-text{
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-right: auto;
+}
+.van-checkbox__icon{
+  border-radius: 8rpx;
+  
+}
+.van-checkbox__icon.van-checkbox__icon--checked{
+  background-color: #141414;
+  border-color: #141414;
+}
+.vant-pop .van-popup{
+  background-color: transparent;
+}
+.bottom .cd-ban{
+  width: 690rpx;
+  height: 530rpx;
+  display: block;
+  margin:0 auto 30rpx;
+}
+.bottom  .cd-box{
+  display: flex;
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 0;
+  overflow-x: auto;
+}
+.bottom  .cd-box .cd-box-child{
+  position: relative;
+  margin-right: 30rpx;
+}
+.bottom  .cd-box .cd-box-child:last-child{
+  margin-right: auto;
+}
+
+.bottom  .cd-box .cd-box-child image{
+  width: 212rpx;
+  height: 216rpx;
+  border-radius: 8rpx;
+}
+.bottom  .cd-box .cd-box-child .cd-title{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  width: 212rpx;
+  color: #333333;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin: 24rpx auto 32rpx;
+}
+.bottom  .cd-box .cd-box-child .cd-money{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  padding-bottom: 24rpx;
+}
+.bottom  .cd-box .cd-box-child .ck{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 8rpx;
+  background-color: rgba(255,255,255, 0.6);
+}
+/* 底部工具栏 */
+.fix-bott{
+  width: 750rpx;
+  height: 120rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 2rpx solid #efefef;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+.fix-bott .left{
+  display: flex;
+  flex-direction: column;
+}
+.fix-bott .left .count{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 48rpx;
+  color: #999999;
+  margin-bottom: auto;
+}
+.fix-bott .left .money{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+}
+.fix-bott .left .money text{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+}
+.fix-bott .right{
+  margin-left: auto;
+}
+.fix-bott .right .jrgwc button{
+  padding: 0;
+  width: 190rpx;
+  height: 80rpx;
+  background: #ffffff;
+  border: 2rpx solid #141414;
+  border-radius: 8rpx 0rpx 0rpx 8rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 80px;
+  color: #141414;
+}
+.fix-bott .right .jrfa button{
+  width: 190rpx;
+  height: 80rpx;
+  background: #141414;
+  border-radius: 0rpx 8rpx 8rpx 0rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 80px;
+  color: #FFFFFF;
+  border: none;
+}

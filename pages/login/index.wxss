@@ -1,0 +1,91 @@
+.login-container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.login-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.loginBtn .van-button {
+  width: 500rpx;
+  height: 80rpx;
+  background: #F59359;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 48rpx;
+  color: #FFFFFF;
+  letter-spacing: 6rpx;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 320rpx;
+}
+/* 暂不登录 */
+.cancelLogin{
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 250rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 48rpx;
+  color: #F59359;
+}
+.getphone-bg{
+  width: 552rpx;
+  height: 329rpx;
+}
+/*
+登录窗
+*/
+.login-container .van-popup{
+  border: none;
+}
+.h2{
+  text-align: center;
+  display: block;
+  margin: 48rpx auto 40rpx;
+  font-size: 32rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #0E0D0D;
+}
+.p{
+  display: block;
+  text-align: center;
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  margin-bottom: 80rpx;
+}
+.small{
+  font-size: 22rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+  text-align: center;
+  margin-bottom: 42rpx;
+}
+.getphoneBtn .van-button{
+  display: block;
+  width: 450rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #F59359;
+  opacity: 1;
+  border-radius: 8rpx;
+  margin: 0 auto 30rpx;
+}

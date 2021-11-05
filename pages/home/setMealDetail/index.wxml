@@ -1,0 +1,105 @@
+<!--套餐详情-->
+<view class="setMeal-detail-main">
+  <!-- top -->
+  <view class="top">
+    <!-- 轮播图 -->
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"  bindchange="swiperChange" current="{{currentSwiper}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="index">
+          <swiper-item class="swp-item" bindtap="toBanDetail">
+            <image src="{{domain+item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="dots">
+        <block wx:for="{{background}}" wx:key="*this">
+          <view class="dot{{index == currentSwiper ? ' swpactive' : ''}}"></view>
+        </block>
+      </view>
+    </view>
+    <!-- 价格 -->
+    <view class="money">￥{{setMealObj.total_price}}</view>
+    <!-- 标题 -->
+    <view class="title">{{setMealObj.name}}</view>
+    <!-- 备注 -->
+    <view class="des">{{setMealObj.description}}</view>
+    <!--分享  收藏  -->
+    <view class="tbr-container">
+      <view class="tbr-item on" bindtap="collectHandle">
+        <image wx:if="{{setMealObj.is_favorites==0}}" src="{{wLink}}/images/sc.png"></image>
+        <image wx:else src="{{wLink}}/images/sc-on.png"></image>
+        收藏
+      </view>
+      <poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+        <view class="tbr-item" bindtap="onCreatePoster">
+          <image src="{{wLink}}/images/fx.png"></image>
+          分享
+        </view>
+      </poster>
+    </view>
+    
+    <!-- 一键九宫格 -->
+    <view class="jgg"  bindtap="tojiuHandle">
+      <image class="icon1" src="{{wLink}}/images/jgg1.png"></image>
+      <text>一键分享九宫格</text>
+      <image class="right" src="{{wLink}}/images/jgg-icon.png"></image>
+    </view>
+  </view>
+  <!--bottom 套餐 -->
+  <view class="bottom">
+    <view wx:for="{{setMealObj.goods}}"  wx:for-index="childindex" wx:key="*this">
+      <view class="check-gp">
+        <text class="title">{{item.name}}</text>
+        <text class="small-text">￥{{item.price}}</text>
+        <van-checkbox value="{{ item.bool }}" data-money="{{item.price}}" data-idx="{{childindex}}" shape="square" bind:change="checkboxChange"></van-checkbox>
+      </view>
+      <image class="cd-ban" wx:if="{{item.image}}" src="{{domain+item.image}}"></image>
+      <image class="cd-ban" wx:else src="{{wLink}}/images/tcsp1.png"></image>
+      <view class="cd-box">
+        <view class="cd-box-child" wx:for="{{item.list}}" wx:for-item="cm" wx:key="*this">
+          <image   src="{{domain+cm.image}}"></image>
+          <view class="cd-title">{{cm.name}}</view>
+          <view class="cd-money">￥{{cm.price}}</view>
+          <view class="ck">
+            <van-checkbox value="{{ cm.bool }}" checked-color="#141414"  data-money="{{cm.price}}"  data-cd="{{cm.id}}" data-fidx="{{childindex}}" data-idx="{{index}}" shape="square" bind:change="checkboxChange"></van-checkbox>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部工具栏 -->
+  <view class="fix-bott">
+    <view class="left">
+      <view class="count">已选{{selectkj}}/{{setMealObj.goods.length}}个空间</view>
+      <view class="money">合计<text>￥{{total}}</text></view>
+    </view>
+    <view class="right">
+      <van-button data-val="gwc" bindtap="saveGwc"  class="jrgwc">加入购物车</van-button>
+      <van-button data-val="fa" bindtap="saveFa" class="jrfa">加入方案</van-button>
+    </view>
+  </view>
+  <!-- 分享海报 -->
+  <van-popup   bind:close="closePosterPop" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ posterBool }}">
+    <view class="poster-main">
+      <image  mode="widthFix"  src="{{posterLink}}"></image>
+      <button bindtap="saveImage">保存到相册</button>
+    </view>
+  </van-popup>
+</view>
+<!-- 选择风格 -->
+<van-popup class="vant-pop"  data-popval="styleBool" position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ styleBool }}">
+  <style wx:if="{{ styleBool }}" styleList="{{styleList}}" bind:saveStyleHandle="saveStyleHandle" bind:closeStyle="closeStyle" ></style>
+</van-popup>
+<!-- 选择方案 -->
+<van-popup class="vant-pop"  data-popval="planBool" position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ planBool }}">
+  <plan wx:if="{{ planBool }}" planList="{{planList}}"  standardsList="{{standardsList}}" bind:addGoodsHandle="addGoodsHandle" bind:savePlanHandle="savePlanHandle" ></plan>
+</van-popup>
+<!-- 方案添加更多商品 -->
+<van-popup class="vant-pop"   position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ addGoodsBool }}">
+  <view style="height: 60rpx;background: transparent;"></view>
+  <searchPlan wx:if="{{ addGoodsBool }}" styleList="{{styleList}}" bind:saveFa="saveFaHandle" planList="{{planList}}" spaceList="{{spaceList}}" bind:closeHandle="closeHandle"  goodOption="{{goodOption}}"   ></searchPlan>
+</van-popup>
+<!-- 提交方案 -->
+<van-popup class="vant-pop"   position="bottom" overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ savePlanBool }}">
+  <savePlan wx:if="{{ savePlanBool }}" bind:addFangan="addFangan" bind:closeHandle="closeFun"  ></savePlan>
+</van-popup>

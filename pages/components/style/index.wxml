@@ -1,0 +1,22 @@
+<!--pages/components/style/index.wxml-->
+<!-- 自定义风格组件 -->
+<view class="style-main">
+  <view class="info">
+    挑选你喜欢的风格
+    <image bindtap="closeStyle" class="close" mode="widthFix" src="{{wLink}}/images/close.png"></image>
+  </view>
+  <view class="small-text">至少选择一个</view>
+  <!--风格  -->
+  <view class="style-list" >
+    <view class="style-list-item" wx:for="{{styleList}}" data-idx="{{index}}" bindtap="checkboxChange" data-id="{{item.id}}" wx:key="*this">
+      <image   src="{{domain+item.image}}"></image>
+      <van-checkbox wx:if="{{ item.boolSty}}"  data-idx="{{index}}" data-id="{{item.id}}" value="{{ item.boolSty}}" checked-color="#141414"  class="checkbox-style"   shape="square"></van-checkbox>
+    </view>
+  </view>
+
+  <!-- 确定 -->
+  <view class="btn-tool">
+    <button bindtap="saveStyleHandle">选好了,立即搭配</button>
+  </view>
+
+</view>

@@ -1,0 +1,151 @@
+/* 邀请好友 */
+page{
+  background-color: #ffffff;
+}
+.inviteFriends-main{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+}
+.imageContainer{
+  width: 100%;
+  height: 987rpx  !important;
+ }
+ .swp-item{
+  padding: 0 3rpx;
+  box-sizing: border-box;
+  height: 987rpx !important;
+  
+}
+.poster{
+  box-shadow: 0rpx 3rpx 20rpx #ECE8E8;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8rpx;
+  z-index: 5;
+  opacity: 0.7;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 0;
+  height: 967rpx;
+  width: 100%;
+  
+}
+#poster{
+  margin-top: 30rpx;
+}
+.poster.active{
+  opacity: 1;
+  z-index: 10;
+  transition:all .2s ease-in 0s;
+}
+
+
+.poster .poster-img{
+  width: 100%;
+  height: 640rpx;
+}
+.poster .userInfo{
+  display: flex;
+  padding: 30rpx 30rpx 65rpx 30rpx;
+  box-sizing: border-box;
+}
+.poster .userInfo .left{
+  margin-right: auto;
+  padding-top: 40rpx;
+  box-sizing: border-box;
+}
+.poster .userInfo .left .title{
+  font-size: 36rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 40rpx;
+}
+.poster .userInfo .left  .phone-num{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+.poster .userInfo .left  .phone-num image{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 10rpx;
+}
+.poster .userInfo .qrcode{
+  width: 170rpx;
+  height: 170rpx;
+}
+
+.small-text{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: #999999;
+  box-sizing: border-box;
+  height: 82rpx;
+  line-height: 82rpx;
+  text-align: center;
+  border-top: 1px solid #F5F5F5;
+}
+.swp-num{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #7D7D7D;
+  margin: 40rpx auto 20rpx;
+  text-align: center;
+}
+.swp-num text{
+  font-size: 30rpx;
+  color: #141414;
+}
+.creat-poster{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 301rpx;
+  height: 80rpx;
+  line-height: 81rpx;
+  background: #141414;
+  opacity: 1;
+  border-radius: 8rpx;
+  margin: 0 auto;
+}
+/* 分享海报 */
+.poster-main{
+  background-color: #ffffff;
+  border-radius: 0rpx 0rpx 8rpx 8rpx;
+  overflow: hidden;
+}
+.poster-main image{
+  width: 616rpx;
+  height: 987rpx;
+}
+.poster-main button{
+  width: 524rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 8rpx;
+  background-color: #141414;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+}
+.poster-main button::after{
+  border: none;
+}

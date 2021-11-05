@@ -1,0 +1,24 @@
+<!-- 我的收藏 -->
+  <!-- 分类选项 -->
+  <view class="collect-container">
+    <van-tabs sticky active="{{ active }}" id="tabs"  bind:change="tabsChange">
+      <van-tab wx:for="{{tabMenuArr}}" wx:key="*this" name="{{item.val}}" title="{{item.name}}">
+        <view wx:if="{{list.length==0}}" class="nodata">
+          <image  src="{{wLink}}/images/plea-no-data.png"></image>
+          <view class="text">暂无数据</view>
+        </view>  
+        <!-- 列表 -->
+        <view wx:else class="house-list">
+          <view wx:for="{{list}}" wx:key="*this" class="house-item" data-item="{{item}}" bindtap="toShopDetail">
+            <image wx:if="{{item[active].image}}" src="{{domain+item[active].image}}"></image>
+            <image wx:else src="{{wLink}}/images/coll.png"></image>
+            <view class="text">
+              <view class="des">{{item[active].name}}</view>
+              <view class="title">￥{{item[active].price}}</view>
+              <button data-id="{{item.id}}" data-index="{{index}}" catchtap="cancalCollect">取消收藏</button>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>

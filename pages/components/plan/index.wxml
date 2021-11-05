@@ -1,0 +1,62 @@
+<!--pages/components/plan/index.wxml-->
+<!-- 添加商品到方案 -->
+<view class="plan-main">
+  <image class="ban"  src="{{wLink}}/images/fa-ban.png"></image>
+  <view class="sp">
+    <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item wx:for="{{planList}}" wx:key="*this" wx:for-index="idx" wx:for-item="pitem" custom-class="coll-item" name="{{pitem.id}}">
+        <view class="coll-box" slot="title">
+          <image class="coll-img" wx:if="{{pitem.icon}}" src="{{domain+pitem.icon}}"></image>
+          <image class="coll-img" wx:else src="{{wLink}}/images/fa-icon2.png"></image>
+          <text>{{pitem.name}}</text>
+        </view>
+        <view slot="icon" class="right-icons" style="background-color: #F3F3F3;">
+            <van-icon catchtap ="addGoodsHandle" data-plObj="{{pitem}}" name="plus" size="21rpx" class="icon-name"/>
+        </view>
+        <!-- 商品详情 -->
+        <view  class="goodsDet-group">
+          <view wx:for="{{standardsArr}}" wx:if="{{(item.space_pid==pitem.id)||(item.fname==pitem.name)}}"  wx:key="*this" class="goods-chil">
+            <view class="left">
+              <van-checkbox shape="square" data-id="{{item.id}}" data-idx="{{index}}"  style="border-radius: 4rpx;" siz="34rpx" value="{{item.planBool}}" bind:change="checkboxChange" checked-color="#141414" ></van-checkbox>
+            </view>
+            <view class="right">
+              <image class="shop-img"  src="{{domain+item.image}}"></image>
+              <view class="text">
+                <view class="title">{{item.name}}</view>
+                <view class="des">{{item.sku}}</view>
+                <view class="mone-ico">
+                  <text wx:if="{{item.saleswitch==1}}">￥{{item.sale_price}}</text>
+                  <text wx:else>￥{{item.price}}</text>
+                  <view class="jian {{item.num<=1?'on':''}}" data-index="{{index}}" bindtap="removeNum">
+                    <image   src="{{wLink}}/images/jian.png"></image>
+                  </view>
+                  <view class="num">{{item.num}}</view>
+                  <view class="jia" bindtap="addNum"   data-index="{{index}}">
+                    <image   src="{{wLink}}/images/jia.png"></image>
+                  </view>
+                  <van-icon  bindtap="deleteShop"  data-id="{{item.goods_id}}"  data-idx="{{index}}" size="54rpx"  class="del" name="delete-o" />
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+  <!-- toobar -->
+  <view class="btn-groups">
+    <view class="left">
+      <van-checkbox class="bdr4" siz="34rpx" value="{{ selectList.length== standardsArr.length && standardsArr.length>0}}" shape="square" checked-color="#141414" bind:change="checkboxAllChange">
+        <text class="allSelect">全选</text>
+      </van-checkbox>
+      <button class="removeBtn" bindtap="removeAll" >删除</button>
+    </view>
+    <view class="right">
+      <view class="info">
+        <view class="count">已选{{selectList.length}}件商品</view>
+        <view class="count">合计<text class="total">￥{{total}}</text></view>
+      </view>
+      <button bindtap="savePlanHandle" class="saveBtn" >生成方案</button>
+    </view>
+  </view>
+</view>

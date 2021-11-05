@@ -1,0 +1,35 @@
+<!-- 随心搭 -->
+<view class="pleased-main">
+  <!-- 添加方案 -->
+  <view class="top-add-plea">
+    <image  bindtap="toAddPlea" src="{{wLink}}/images/plea-add.png"></image>
+    <view class="text">添加我的方案</view>
+  </view>
+  <!-- 列表 -->
+    <scroll-view class="tab-type" scroll-x>
+      <view class="child {{tbTypeActive==item.id?'on':''}}" bindtap="tabCheck" data-active="{{item.id}}" wx:for="{{tabType}}" wx:key="index">
+        {{item.name}}
+        <view class="bd-line"></view>
+      </view>
+    </scroll-view>
+    <!--  -->
+    <view class="list">
+      <view wx:for="{{list}}" wx:key="*this" class="item-flex" data-id="{{item.id}}" bindtap="toPleaDetail">
+        <image wx:if="{{item.image}}" class="ban_" src="{{domain+ item.image}}"></image>
+        <image wx:else class="ban_" src="{{wLink}}/images/plea1.png"></image>
+        <view class="title">{{item.name}}</view>
+        <view class="tool-bott">
+          <view class="left">
+            <image wx:if="{{item.user.avatar}}" src="{{item.user.avatar}}"></image>
+            <image wx:else src="{{wLink}}/images/u-img.png"></image>
+            <view class="tx">{{item.user.nickname}}</view>
+          </view>
+          <view class="right">
+            <image  data-id="{{item.id}}" wx:if="{{item.is_zan>0}}" src="{{wLink}}/images/dz-on.png"></image>
+            <image catchtap="dianzanHandle"  data-id="{{item.id}}" wx:else src="{{wLink}}/images/dz.png"></image>
+            <view class="tx">{{item.zan}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

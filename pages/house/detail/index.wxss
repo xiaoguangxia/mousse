@@ -1,0 +1,73 @@
+/* 户型库详情*/
+.house-detail-main{
+
+}
+.house-detail-main .page-section swiper{
+  width: 100%;
+  height: 754rpx;
+}
+.house-detail-main .page-section swiper .swp-item image{
+  width: 100%;
+  height: 754rpx;
+}
+/*用来包裹所有的小圆点  */
+ 
+.house-detail-main .dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20rpx;
+}
+ 
+/*未选中时的小圆点样式 */
+ 
+.house-detail-main .dot {
+  width: 6rpx;
+  height: 6rpx;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+ 
+/*选中以后的小圆点样式  */
+ 
+.house-detail-main .swpactive {
+  width: 6rpx;
+  height: 6rpx;
+  background: #141414;
+}
+.house-detail-main .details-main-header{
+  margin:0 auto 30rpx;
+  background-color: #ffffff;
+  padding: 60rpx 30rpx 40rpx;
+  box-sizing: border-box;
+}
+.house-detail-main .details-main-header image{
+  width: 100%;
+  height: 754rpx;
+}
+.house-detail-main .details-main-header .title{
+  font-size: 36rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 69rpx;
+  color: #333333;
+  margin: 0rpx auto 60rpx;
+  text-align: center;
+}
+.house-detail-main .details-main-header .des{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 32rpx;
+  color: #666666;
+  text-align: center;
+}
+.content{
+  background-color: #ffffff;
+  min-height: 180rpx;
+}
+.content image{
+  max-width: 100%;
+}

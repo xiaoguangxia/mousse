@@ -1,0 +1,89 @@
+/* pages/components/standards/index.wxss */
+.style-main {
+  width: 750rpx;
+  margin-top: 120rpx;
+  padding: 40rpx 30rpx 120rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 30rpx 30rpx 0px 0px;
+}
+.style-main  .info{
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 30rpx;
+}
+.style-main  .info  .close{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: auto;
+}
+.style-main .small-text{
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+
+/* 风格列表 */
+.style-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.style-list .style-list-item{
+  position: relative;
+  width: 330rpx;
+  height: 162rpx;
+  margin-bottom: 30rpx;
+}
+.style-list .style-list-item image{
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+}
+.style-list .style-list-item .checkbox-style {
+  border-radius: 8rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* 确定 */
+.style-main  .btn-tool{
+  width: 750rpx;
+  height: 120rpx;
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  padding: 10rpx 70rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.style-main  .btn-tool button{
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 8rpx;
+  background-color: #141414;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+}
+.style-main  .btn-tool button::after{
+  border: none;
+}

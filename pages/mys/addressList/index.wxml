@@ -1,0 +1,26 @@
+<!-- 地址管理 -->
+<view class="address-main">
+  <block wx:if="{{list.length>0}}">
+    <view   wx:for="{{list}}" wx:key="*this" bindtap="cancelSaveOrder" data-item="{{item}}" class="addre-list">
+      <view class="left">
+        <view class="top">
+          <text class="name">{{item.consignee}}</text>
+          <text class="phone">{{item.phone}}</text>
+          <button wx:if="{{item.default==1}}">默认</button>
+        </view>
+        <view class="bottom">
+          {{item.address}}
+        </view>
+      </view>
+      <image class="address-img" data-item="{{item}}" catchtap="editAddress" src="{{wLink}}/images/address-edit.png"></image>
+    </view>
+  </block>
+  <view wx:else  class="nodata">
+    <image  src="{{wLink}}/images/plea-no-data.png"></image>
+    <view class="text">暂无数据</view>
+  </view>  
+  <!-- bin -->
+  <view class="btn-group">
+    <button bindtap="toAddressDetail">＋ 新增收货地址</button>
+  </view>
+</view>

@@ -1,0 +1,132 @@
+
+<!--首页-->
+<view class="home-container">
+  <!-- 轮播图 -->
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}"  bindchange="swiperChange" current="{{currentSwiper}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="index">
+        <swiper-item class="swp-item" data-id="{{item.id}}"  bindtap="toBanDetail">
+          <image src="{{domain+item.image}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{background}}" wx:key="*this">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <!-- 保障 -->
+  <image class="ensure" src="{{wLink}}/images/bz.png"></image>
+  <!-- 公司简介 -->
+  <rich-text class="company_intro" nodes="{{company_intro}}"></rich-text>
+  <!-- 套餐小轮播 -->
+  <view class="page-section2 swiper">
+    <scroll-view scroll-x="true" class="top-type-scroll">
+      <block wx:for="{{package_category}}" wx:for-index="idx" wx:key="*this">
+        <view class="swp-item" data-id="{{item.id}}" bindtap="toFatherMealList" style="margin-left:30rpx;height:200rpx;">
+          <image  src="{{domain+item.image}}"></image>
+          <view class="text">
+            <view class="h3">{{item.name}}</view>
+            <view class="dec">{{item.description}}</view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- 分类 -->
+  <view class="list-type">
+    <view class="list-item"  data-type="readyswitch" bindtap="msHandle">
+      <view class="text">
+        <view class="h3">现货区</view>
+        <view class="dec">SPOT AREA</view>
+      </view>
+      <image src="{{wLink}}/images/t1.png"></image>
+    </view>
+    <view class="list-item"   data-type="newswitch" bindtap="msHandle">
+      <view class="text">
+        <view class="h3">新品区</view>
+        <view class="dec">NEW PRODUCT</view>
+      </view>
+      <image src="{{wLink}}/images/t2.png"></image>
+    </view>
+    <view class="list-item"   data-type="fashionswitch" bindtap="msHandle">
+      <view class="text">
+        <view class="h3">流行区</view>
+        <view class="dec">EPIDEMIC ARE </view>
+      </view>
+      <image src="{{wLink}}/images/t3.png"></image>
+    </view>
+    <view class="list-item"   data-type="hotswitch" bindtap="msHandle">
+      <view class="text">
+        <view class="h3">热销区</view>
+        <view class="dec">HOT SELLING</view>
+      </view>
+      <image src="{{wLink}}/images/t4.png"></image>
+    </view>
+  </view>
+  <!-- 现货特价 -->
+  <view class="xhtj">
+    <view class="h2">秒杀特价</view>
+    <view class="more" data-type="saleswitch" bindtap="msHandle">更多 | MORE</view>
+    <view class="p">限时打折新品，过时回复原价，不含运费</view>
+    <view class="page-section-spacing">
+      <scroll-view class="scroll-view_H" scroll-x="true">
+        <block wx:for="{{sale}}" wx:for-index="idx" wx:key="*this">
+          <view  bindtap="toShopDetail" data-id="{{item.id}}" class="scroll-view-item_H demo-text-1">
+            <image class="ban-img"  src="{{domain+item.image}}"></image>
+            <view class="title">{{item.name}}</view>
+            <view class="money">￥{{item.sale_price}}</view>
+            <view class="bt-group">
+              <text>￥{{item.price}}</text>
+              <view class="cart-img">
+                <image  src="{{wLink}}/images/cart.png"></image>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="line"></view>
+  </view>
+  <!-- 自营商品 -->
+  <view class="zysp">
+    <view class="h2">自营商品</view>
+    <view class="more" bindtap="toShopDetailList">更多 | MORE</view>
+    <view class="p">精选商品</view>
+    <!-- 导航 -->
+    <scroll-view class="tab-type" scroll-x="true" >
+      <!-- <view class="tab-type"> -->
+        <view class="child {{tbTypeActive==item.id?'on':''}}" bindtap="tabCheck" data-active="{{item.id}}" wx:for="{{tabType}}" wx:key="index">
+          {{item.name}}
+          <view class="bd-line"></view>
+        </view>
+    </scroll-view>
+    <!-- </view> -->
+    <!-- 列表 -->
+    <view class="flex-list">
+      <view bindtap="toShopDetail" data-id="{{item.id}}" class="list-child" wx:for="{{shopList}}" wx:key="index">
+        <image  src="{{domain+item.image}}"></image>
+        <view class="title">{{item.name}}</view>
+        <view class="small-money">￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 广告弹窗 -->
+<van-popup   bind:close="closePop" overlay-style=" background-color: rgba(0,0,0,.6);" show="{{ advertShow }}">
+  <view class="page-section3">
+    <swiper indicator-dots="{{indicatorDots}}"  bindchange="{{adChangeSwiper}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{adList}}" wx:key="index">
+          <swiper-item class="swp-item" data-id="{{item.id}}" >
+            <image class="gg" src="{{domain+item.image}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <image  bindtap="adverHandle" class="gg-close" src="{{wLink}}/images/close.png" alt=""></image>
+      <!-- 进度 -->
+      <view class="dots">
+        {{adIndex}}/{{adList.length}}
+      </view>
+  </view>
+</van-popup>

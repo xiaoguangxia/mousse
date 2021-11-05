@@ -1,0 +1,7 @@
+<!--pages/home/detail.wxml-->
+<!-- 首页轮播详情 -->
+<view class="ban-detail">
+  <view>
+    <rich-text nodes="{{content}}"></rich-text>
+  </view>
+</view>

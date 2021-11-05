@@ -1,0 +1,171 @@
+/* 户型库-列表 */
+page{
+  background-color: #ffffff;
+}
+.house-main{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.house-main .search-box{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 30rpx 40rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+.house-main .search-box .inp{
+  display: flex;
+  align-items: center;
+  width: 531rpx;
+  height: 64rpx;
+  background: #F2F2F2;
+  border-radius: 32rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+}
+.house-main .search-box .inp image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 23rpx;
+}
+.house-main .search-box .inp input{
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  color: #141414;
+  font-weight: 400;
+}
+.house-main .search-box .search-text{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+}
+/* 分类选项tab */
+.setMeal-container .van-tab{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  flex-basis: auto !important;
+  padding:0rpx 30rpx 25rpx;
+}
+.setMeal-container .van-tab .van-ellipsis{
+  text-overflow: unset;
+  overflow: visible;
+}
+.setMeal-container .van-tab.van-tab--active{
+  font-weight: 600;
+}
+.setMeal-container .van-tabs__nav{
+  border-bottom: 2rpx solid #F8F8F8;
+}
+.setMeal-container .van-tabs__line{
+  width: 56rpx !important;
+  border-radius: 8rpx;
+  height: 6rpx;
+  background-color: #141414;
+}
+/* 小分类 */
+
+.setMeal-container  .goodslist-type{
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  margin-bottom: 40rpx;
+}
+.setMeal-container  .goodslist-type .scroll-view-item:nth-child(1){
+  margin-left: 0;
+}
+.setMeal-container  .goodslist-type .scroll-view-item{
+  margin-left: 50rpx;
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #999999;
+  letter-spacing: 2rpx;
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.setMeal-container  .goodslist-type .scroll-view-item.on{
+  background: #FAFAFA;
+  border-radius: 12rpx;
+  font-weight: 600;
+  padding: 0rpx 20rpx;
+  color: #F59359;
+}
+/* 户型列表 */
+.house-list{
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.house-list .house-item{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.house-list .house-item image{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 30rpx;
+}
+.house-list .house-item .text{
+  flex: 1;
+}
+.house-list .house-item .text .title{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 30rpx;
+  width: 460rpx;
+  text-align: justify;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.house-list .house-item .text .des{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+  width: 460rpx;
+  text-align: justify;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+/* 没有数据 */
+.nodata{
+  margin: 175rpx auto auto;
+  text-align: center;
+}
+.nodata image{
+  width: 304rpx;
+  height: 304rpx;
+  margin-bottom: 30rpx;
+}
+.nodata .text{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  text-align: center;
+}

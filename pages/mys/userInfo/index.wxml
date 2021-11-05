@@ -1,0 +1,43 @@
+<!-- 个人信息 -->
+<view class="mys-userinfo">
+  <view class="row-group">
+    <view class="left">
+      头像
+    </view>
+    <view class="right">
+      <image wx:if="{{userInfo.avatar}}"  class="uimg" src="{{userInfo.avatar}}"></image>
+      <image wx:else   class="uimg" src="{{wLink}}/images/my-img.png"></image>
+    </view>
+  </view>
+  <view class="row-group">
+    <view class="left">
+      昵称
+    </view>
+    <view class="right"  data-type="nickname" bindtap="editInfo">
+      {{userInfo.nickname}}
+      <image class="icon" src="{{wLink}}/images/my-right.png"></image>
+    </view>
+  </view>
+  <view class="row-group">
+    <view class="left">
+      手机号
+    </view>
+    <view class="right">
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        {{userInfo.mobile}}
+        <image class="icon"  src="{{wLink}}/images/my-right.png"></image>
+      </button>
+    </view>
+  </view>
+</view>
+<!-- 弹出层 -->
+<van-popup show="{{ bool }}">
+  <view class="pop">
+    <textarea bindinput="textChange"  value="{{values}}"></textarea>
+    <view class="btn-group">
+      <button class="save" bindtap="saveHandle">保存</button>
+      <button class="cancel" bindtap="clickPoup">取消</button>
+    </view>
+  </view>
+  
+</van-popup>

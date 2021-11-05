@@ -1,0 +1,40 @@
+<!-- 订单管理页面 -->
+<view class="order-main">
+  <!-- 顶部可滚动菜单 -->
+  <scroll-view  scroll-x style="height: 84rpx;white-space: nowrap;" >
+    <view class="flex-box">
+      <view class="flex-item {{item.id==active?'on':''}}" bindtap="tabChange" data-id="{{item.id}}" wx:for="{{tabMenuArr}}" wx:key="*this">
+        <view>{{item.name}}</view>
+        <view wx:if="{{item.id==active}}" class="bdr"></view>
+      </view>
+    </view>
+  </scroll-view>
+  <view  wx:if="{{list.length==0}}" class="nodata">
+    <image  src="{{wLink}}/images/plea-no-data.png"></image>
+    <view class="text">暂无数据</view>
+  </view>  
+  <!-- 订单列表 -->
+  <block wx:else>
+    <view wx:for="{{list}}" wx:key="*this" wx:for-item="fitem" class="order-content">
+      <view class="order-state"  wx:for="{{tabMenuArr}}" wx:key="*this" wx:if="{{item.id==fitem.status}}">{{item.name}}</view>
+      <view class="order-list" wx:for="{{fitem.list}}" wx:key="*this">
+        <image wx:if="{{item.goods_image}}" src="{{domain+item.goods_image}}"></image>
+        <image wx:else src="{{wLink}}/images/plea1.png"></image>
+        <view class="right-text">
+          <view class="title">{{item.goods_name}}</view>
+          <view class="price">￥{{item.goods_sale_price?item.goods_sale_price:item.goods_price}}</view>
+          <view class="des">{{item.goods_sku}} 数量{{item.goods_num}}</view>
+          <button class="wl" data-id="{{fitem.id}}" data-express_no="{{item.express_no}}"  bindtap="toDetail">查看物流</button>
+        </view>
+      </view>
+      <view class="total-count">共{{fitem.list.length}}件，合计<text>￥{{fitem.total_amount}}</text></view>
+      <view class="btn-group">
+        <button wx:if="{{fitem.status!=5}}"  data-id="{{fitem.id}}"  catchtap="outOrder" class="dc">导出订单</button>
+        <button wx:if="{{fitem.status==1}}" bindtap="saveOrderHandle" data-id="{{fitem.id}}" class="dc">提交订单</button>
+        <button wx:if="{{fitem.status==1}}" bindtap="cancelOrderHandle" data-id="{{fitem.id}}" class="ca">取消订单</button>
+        <button wx:if="{{fitem.status==3}}" bindtap="confirmReceipt" data-id="{{fitem.id}}" class="ca">确认收货</button>
+      </view>
+    </view>
+  </block>
+  <van-dialog id="van-dialog" />
+</view>

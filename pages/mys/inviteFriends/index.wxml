@@ -1,0 +1,36 @@
+<!-- 分享好友 -->
+<view class="inviteFriends-main">
+  <swiper   class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
+    <block wx:for="{{list}}" wx:key="*this">
+      <swiper-item class="swp-item">
+        <view  class="poster {{currentIndex == index ? 'active': ''}}">
+          <image class="poster-img" src="{{domain + item.image}}"></image>
+          <view class="userInfo">
+            <view class="left">
+              <view class="title">美学空间研究院</view>
+              <view class="phone-num">
+                <image  src="{{wLink}}/images/phone-icon.png"></image>
+                <text>{{userInfo.mobile}}</text>
+              </view>
+            </view>
+            <image wx:if="{{item.qrcode}}" class="qrcode" src="{{domain + item.qrcode}}"></image>
+            <image wx:else  class="qrcode"  src="{{wLink}}/images/mqrcode.png"></image>
+          </view>
+           <!--  -->
+          <view class="small-text">微信扫码进入小程序</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <view class="swp-num"><text>{{currentIndex+1}}</text>/{{list.length}}</view> -->
+  <poster id="poster" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    <button class="creat-poster" bindtap="onCreatePoster">生成海报</button>
+  </poster>
+  <!-- 分享海报 -->
+  <van-popup  bind:close="closePop"  overlay-style="background-color: rgba(0, 0, 0, 0.2);"  show="{{ posterBool }}">
+      <view class="poster-main">
+        <image    src="{{posterLink}}"></image>
+        <button bindtap="saveImage">保存到相册</button>
+      </view>
+    </van-popup>
+</view>

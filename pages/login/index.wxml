@@ -1,0 +1,17 @@
+<!-- 用户一键登录  -->
+<!-- 阻止滚动穿透 -->
+<page-meta page-style="{{ (getUserInfoBool || advertShow) ? 'overflow: hidden;' : '' }}" />
+<view class="login-container">
+  <image class="login-bg" src="{{wLink}}/images/login-bg.png" alt=""></image>
+  <van-button class="loginBtn"  open-type='getUserInfo' bindgetuserinfo='getUserInfo'  type="warning">一键快速登录</van-button>
+  <view class="cancelLogin" bindtap="cancelLogin">暂不登录</view>
+  <!-- 登录弹窗 -->
+  <van-popup show="{{ getUserInfoBool }}">
+    <image class="getphone-bg" src="{{wLink}}/images/getPhone-bg.png" alt=""></image>
+    <text class="h2">欢迎进入一站式全屋家具商场</text>
+    <text class="p">授权进入购物之旅</text>
+    <van-button class="getphoneBtn"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="warning">确认授权</van-button>
+    <view class="small">点击绑定微信</view>
+  </van-popup>
+
+</view>

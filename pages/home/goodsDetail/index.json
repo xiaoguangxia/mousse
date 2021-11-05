@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-button": "@vant/weapp/button/index",
+    "poster": "wxa-plugin-canvas/poster",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "standards":"../../components/standards/index",
+    "style":"../../components/style/index",
+    "plan":"../../components/plan/index",
+    "searchPlan":"../../components/searchPlan/index",
+    "savePlan":"../../components/savePlan/index"
+  },
+  "navigationBarTitleText": "商品详情"
+}

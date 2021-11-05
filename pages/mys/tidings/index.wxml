@@ -1,0 +1,16 @@
+<!-- 我的消息 -->
+<view class="tidings-main">
+  <view wx:for="{{list}}" wx:key="*this" class="tidings-list">
+    <view class="img">
+      <image  src="{{wLink}}/images/tidings.png"></image>
+    </view>
+    <view class="left">
+      <view class="title">{{item.title}}</view>
+      <view class="des">{{item.content}}</view>
+    </view>
+    <view class="right">
+      <view>{{item.date}}</view>
+      <view>{{item.time}}</view>
+    </view>
+  </view>
+</view>

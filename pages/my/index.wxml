@@ -1,0 +1,102 @@
+<!-- 我的 -->
+<view class="my-main">
+  <!-- 背景 -->
+  <image class="bg" src="{{wLink}}/images/my-bg.png"></image>
+  <view class="userinfo">
+    <image wx:if="{{userInfo.avatar}}" class="myimg" src="{{userInfo.avatar}}"></image>
+    <image wx:else class="myimg" src="{{wLink}}/images/my-user.png"></image>
+    <view class="user-type">普通用户</view>
+    <view class="name">
+      {{userInfo.nickname}}<image class="edit" bindtap="toUserInfo" src="{{wLink}}/images/my-edit.png"></image>
+    </view>
+    <view class="ID">ID：{{userInfo.user_id}}</view>
+    <view class="user-mess">
+      <view class="mess-item" bindtap="toCollect">
+        <view class="bold">{{userInfo.favorites}}</view>
+        <view class="text">收藏</view>
+      </view>
+      <view class="mess-item" bindtap="toTidings">
+        <view class="bold">{{userInfo.message}}</view>
+        <view class="text">消息</view>
+      </view>
+      <view class="shop" bindtap="toShoppingCart">
+        <image class="gwc" src="{{wLink}}/images/my-gwc.png"></image>购物车
+      </view>
+    </view>
+  </view>
+  <!-- 订单 -->
+  <view class="order-main">
+    <view class="title-group">
+      <text class="title">我的订单</text>
+      <view class="right" bindtap="toAllOrder">
+        全部订单
+        <image  src="{{wLink}}/images/my-right.png"></image>
+      </view>
+    </view>
+    <!--  -->
+    <view class="order-list">
+      <view  class="order-item"  data-status="1" bindtap="toAllOrder">
+        <view class="left">
+          <view class="order-item-title">待提交</view>
+          <view class="num">{{userInfo.order_dtj}}</view>
+        </view>
+        <image class="order-item-img" src="{{wLink}}/images/t1.png"></image>
+      </view>
+      <view  class="order-item"  data-status="2" bindtap="toAllOrder">
+        <view class="left" >
+          <view class="order-item-title">待发货</view>
+          <view class="num">{{userInfo.order_dfh}}</view>
+        </view>
+        <image class="order-item-img" src="{{wLink}}/images/t2.png"></image>
+      </view>
+      <view  class="order-item"  data-status="3" bindtap="toAllOrder">
+        <view class="left" >
+          <view class="order-item-title">待收货</view>
+          <view class="num">{{userInfo.order_dsh}}</view>
+        </view>
+        <image class="order-item-img" src="{{wLink}}/images/t3.png"></image>
+      </view>
+      <view  class="order-item"   data-status="4" bindtap="toAllOrder">
+        <view class="left">
+          <view class="order-item-title">已完成</view>
+          <view class="num">{{userInfo.order_ywc}}</view>
+        </view>
+        <image class="order-item-img" src="{{wLink}}/images/t4.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 常用功能 -->
+  <view class="comm-main">
+    <view class="title-group">
+      <text class="title">常用功能</text>
+    </view>
+    <view class="comm-list">
+      <view class="comm-item"  bindtap="toInviteFriends">
+        <image class="comm-img" src="{{wLink}}/images/m1.png"></image>
+        <view class="text">邀请好友</view>
+      </view>
+      <view class="comm-item" bindtap="toTracks">
+        <image class="comm-img" src="{{wLink}}/images/m2.png"></image>
+        <view class="text">我的足迹</view>
+      </view>
+      <view class="comm-item" bindtap="toAddress">
+        <image class="comm-img" src="{{wLink}}/images/m3.png"></image>
+        <view class="text">地址管理</view>
+      </view>
+      <view class="comm-item" bindtap="toMyPlan">
+        <image class="comm-img" src="{{wLink}}/images/m4.png"></image>
+        <view class="text">我的方案</view>
+      </view>
+      <view class="comm-item" bindtap="toFeedBack">
+        <image class="comm-img" src="{{wLink}}/images/m5.png"></image>
+        <view class="text">意见反馈</view>
+      </view>
+      <view class="comm-item">
+        <button class="kf" open-type='contact'>
+          <image class="comm-img" src="{{wLink}}/images/m6.png"></image>
+          <view class="text">联系客服</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

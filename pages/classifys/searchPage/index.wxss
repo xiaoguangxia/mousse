@@ -1,0 +1,310 @@
+/* pages/classifys/searchPage/index.wxss */
+page{
+  background-color: #ffffff;
+}
+.searchPage-main{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.searchPage-main .sea-inpu{
+  border-bottom: 4rpx solid #000000;
+  padding-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.searchPage-main .sea-inpu input{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #303133;
+  flex: 1;
+}
+.searchPage-main .sea-inpu button{
+  font-size: 26rpx;
+  color: #303133;
+  font-weight: 400;
+  /* background-color: transparent; */
+  margin: 0;
+  margin-left:auto ;
+}
+.searchPage-main .sea-inpu button::after{
+  border: none;
+}
+.title-group{
+  padding-top: 60rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.title-group  .img{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 10rpx;
+}
+.title-group text{
+  font-size: 32rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #303133;
+  margin-right: auto;
+  letter-spacing: 4rpx;
+}
+.tag-group{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag-group .tag-item{
+  padding:0rpx 20rpx;
+  min-width: 170rpx;
+  margin-bottom: 40rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  box-sizing: border-box;
+  border: 1px solid #E7E7E7;
+  margin-right: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 69rpx;
+  color: #303133;
+}
+.label-group{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.label-group .label-item{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 69rpx;
+  letter-spacing: 4rpx;
+  color: #303133;
+}
+.label-group .label-item .num{
+  width: 30rpx;
+  box-sizing: border-box;
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #E4E4E4;
+  border-radius: 4rpx;
+  margin-right: 20rpx;
+  font-size: 22rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #141414;
+}
+.label-group .label-item:nth-child(1) .num{
+  width: 34rpx;
+  height: 34rpx;
+  background: #F9D543;
+  color: #ffffff;
+  border: none;
+}
+.label-group .label-item:nth-child(2) .num{
+  width: 34rpx;
+  height: 34rpx;
+  background: #A9A8AF;
+  color: #ffffff;
+  border: none;
+}
+.label-group .label-item:nth-child(3) .num{
+  width: 34rpx;
+  height: 34rpx;
+  background: #F98143;
+  color: #ffffff;
+  border: none;
+}
+/* 详细规格分类 */
+.setMeal-container{
+  padding-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+.setMeal-container  .search-type{
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  line-height: 1;
+}
+.setMeal-container  .search-type .scroll-view-item:nth-child(1){
+  margin-left: 0;
+}
+.setMeal-container  .search-type .scroll-view-item{
+  margin-left: 60rpx;
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #999999;
+  display: inline-block;
+  line-height: 1;
+}
+.setMeal-container  .search-type .scroll-view-item .icon1{
+  width: 14rpx;
+  height: 14rpx;
+  margin-left: 10rpx;
+}
+.setMeal-container  .search-type .scroll-view-item.on{
+  font-weight: 600;
+  color: #F59359;
+}
+
+/* 筛选条件 */
+.sxtj{
+  padding: 30rpx 0rpx 0rpx;
+  position: relative;
+}
+/* 户型 */
+.sxtj .hx{
+  padding: 0 30rpx;
+}
+.sxtj .hx .sea-title{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.sxtj .hx:nth-child(1) .sea-title{
+  padding-top: 0;
+}
+.sxtj .sea-box{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sxtj .sea-box .box{
+  font-size: 26rpx;
+  background: #FAFAFA;
+  border-radius: 12rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  height: 50rpx;
+  padding: 0 20rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #999999;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+.sxtj .sea-box .box.on{
+  background: rgba(246, 147, 90, 0.11);
+  color: #F59359;
+}
+.sxtj .btn-group{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.sxtj .btn-group button::after{
+  border: none;
+}
+.sxtj .btn-group .reset{
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #F8F8F8;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #666666;
+  outline: none;
+  border-radius:0 ;
+}
+.sxtj .btn-group .saveSear{
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  background: #F59359;
+  outline: none;
+  border-radius:0 ;
+}
+.sxtj .fg{
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #F8F8F8;
+}
+.sxtj .fg text{
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #999999;
+  margin-right: auto;
+}
+.sxtj .fg.on text{
+  color: #F59359;
+}
+/* 搜索结果列表 */
+.search-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-list .search-item{
+  width: 336rpx;
+  margin-right: 18rpx;
+  margin-bottom: 40rpx;
+}
+.search-list .search-item:nth-child(even){
+  margin-right: 0;
+}
+.search-list .search-item image{
+  width: 100%;
+  height: 334rpx;
+  margin-bottom: 24rpx;
+}
+.search-list .search-item .title{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #333333;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin-bottom: 32rpx;
+  text-align: center;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+}
+.search-list .search-item .money{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #F59359;
+  text-align: center;
+}
+/* 没有数据 */
+.searchPage-main .nodata{
+  margin: 175rpx auto auto;
+}
+.searchPage-main .nodata image{
+  width: 304rpx;
+  height: 304rpx;
+  margin-bottom: 30rpx;
+}
+.searchPage-main .nodata .text{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  text-align: center;
+}

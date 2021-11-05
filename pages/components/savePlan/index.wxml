@@ -1,0 +1,28 @@
+<!--pages/components/plan/index.wxml-->
+<!-- 选择方案 -->
+<view class="plan-main">
+  <image class="ban"  src="{{wLink}}/images/fa-ban.png"></image>
+  <view class="sp">
+    <image class="close" bindtap="closeHandle" src="{{wLink}}/images/close.png"></image>
+    <view class="title">方案命名</view>
+    <view class="lable">方案名称</view>
+    <view class="input">
+      <input type="text" type="text" data-type="faname" bindinput="inputChange" value="{{faname}}"  placeholder="格式:空间+风格，如:两房一厅的轻奢风" />
+    </view>
+    <view class="lable">搭配理念</view>
+    <view class="input">
+      <input type="text" type="text" data-type="lnVal" bindinput="inputChange" value="{{lnVal}}" placeholder="格式:空间+风格，如:两房一厅的轻奢风" />
+    </view>
+    <view class="lable">选择封面图</view>
+    <view class="input">
+      <image wx:if="{{fmtLink}}" bindtap="uploadImg" class="fmt"  src="{{domain+fmtLink}}"></image>
+      <view wx:else class="img" bindtap="uploadImg">
+        <van-icon name="plus" size="40rpx" />
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="btn-group">
+    <button bindtap="cfmClick" class="saveSear">立即创建</button>
+  </view>
+</view>

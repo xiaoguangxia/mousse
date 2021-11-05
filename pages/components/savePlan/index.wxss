@@ -1,0 +1,97 @@
+/* pages/components/plan/index.wxss */
+.plan-main {
+  width: 750rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120rpx;
+}
+.plan-main .ban{
+  width: 750rpx;
+}
+.plan-main  .sp{
+  padding: 40rpx 30rpx 20rpx;
+  background: #FFFFFF;
+  opacity: 1;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+  overflow: hidden;
+  margin-top: -40rpx;
+}
+.plan-main  .sp  .close{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: auto;
+}
+.plan-main  .sp .title{
+  font-size: 32rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+  margin-bottom: 50rpx;
+}
+.plan-main  .sp .lable{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  margin-bottom: 30rpx;
+}
+.plan-main  .sp  input{
+  height: 89rpx;
+  line-height: 89rpx;
+  border: 1px solid #EEEEEE;
+  margin-bottom: 40rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.plan-main  .sp .input .img{
+  border: 1px solid #EEEEEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170rpx;
+  height: 170rpx;
+  margin-bottom: 150rpx;
+}
+.btn-group{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #EFEFEF;
+  width: 750rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding: 10rpx 30rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+.btn-group button{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #141414;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  box-sizing: border-box;
+}
+.btn-group button::after{
+  border: none;
+}
+.plan-main  .sp .input .fmt{
+  width: 170rpx;
+  height: 170rpx;
+}

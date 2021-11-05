@@ -1,0 +1,214 @@
+/* 我的订单物流信息 */
+page{
+  background-color: #ffffff;
+}
+.order-detail-main{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120rpx;
+  box-sizing: border-box;
+}
+.order-detail-main .addre-list{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F5F5F5;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.order-detail-main .addre-list .left{
+  width: 100%;
+}
+.order-detail-main .addre-list .left .top{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.order-detail-main .addre-list .left .top .name{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+  margin-top: 28rpx;
+}
+.order-detail-main .addre-list .left .top .phone{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 28rpx;
+  margin-left: 30rpx;
+  margin-right: 5rpx;
+}
+.order-detail-main .addre-list .left .top button{
+  width: 70rpx;
+  height: 40rpx;
+  background: #141414;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 40rpx;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.order-detail-main .addre-list .left .top button::after{
+  border: none;
+}
+.order-detail-main .addre-list .left .bottom{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+}
+.order-detail-main .addre-list .address-img{
+  width: 42rpx;
+  height: 42rpx;
+}
+.address-info{
+  display: flex;
+  align-items: center;
+  padding: 50rpx 30rpx 50rpx 43rpx;
+  box-sizing: border-box;
+  border-bottom: 20rpx solid #f7f7f7;
+  
+}
+.address-info .map{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 20rpx;
+}
+.address-info text{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #F65A5A;
+}
+.address-info .icon{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: auto;
+}
+.order-detail-main .order-detailT{
+  padding: 0 30rpx 78rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  flex: 1;
+}
+.order-detail-main  .order-detailT .detail{
+  display: flex;
+  padding-top: 40rpx;
+  padding-bottom: 90rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #F5F5F5;
+}
+.order-detail-main  .order-detailT .detail image{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 30rpx;
+}
+.order-detail-main  .order-detailT .detail .right-text{
+  width: 460rpx;
+}
+.order-detail-main  .order-detailT .detail .right-text .title{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+}
+.order-detail-main  .order-detailT .detail .right-text .price{
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+  display: flex;
+}
+.order-detail-main  .order-detailT .detail .right-text .price text{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #F59359;
+  margin-left: auto;
+}
+.order-detail-main  .order-detailT .detail .right-text .des{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 30rpx;
+  color: #999999;
+  margin:22rpx auto 42rpx;
+}
+.order-detail-main  .order-detailT .small-title{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  margin: 30rpx auto;
+  color: #333333;
+}
+.order-detail-main  .order-detailT .small-text{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 30rpx;
+  color: #999999;
+  height: 413rpx;
+  border: 1px dashed #E6E6E6;
+  padding: 30rpx;
+}
+/* 底部工具栏 */
+.bott-toolbar{
+  display: flex;
+  align-items: center;
+  padding: 15rpx 30rpx 15rpx 40rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120rpx;
+  background: #FFFFFF;
+  border-top: 1px solid #E6E6E6;
+}
+.bott-toolbar .total-text{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+}
+.bott-toolbar .total-text text{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #F59359;
+}
+
+
+.bott-toolbar  .js{
+  width: 202rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #141414;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-left: auto;
+}
+.bott-toolbar  .js::after{
+  border: none;
+}

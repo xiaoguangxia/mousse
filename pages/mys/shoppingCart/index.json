@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarTitleText": "购物车"
+}

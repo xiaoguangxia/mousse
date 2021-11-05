@@ -1,0 +1,30 @@
+/**app.wxss**/
+page{
+  background: #F8F8F8;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.kf{
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  height: auto;
+  width: auto;
+  line-height: 1;
+}
+.kf::after{
+  border: none;
+}
+/* 解决滚动条横线问题 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

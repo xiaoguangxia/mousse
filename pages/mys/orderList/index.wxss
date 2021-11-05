@@ -1,0 +1,189 @@
+/* <!-- 订单管理页面 --> */
+page{
+  background: #F7F7F7;
+}
+.order-main{
+  display: flex;
+  flex-direction: column;
+}
+.order-main .flex-box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #ffffff;
+}
+.order-main .flex-box .flex-item{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  position: relative;
+  height: 100%;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+.order-main .flex-box .flex-item.on{
+  color: #141414;
+}
+.order-main .flex-box .flex-item .bdr{
+  width: 56rpx;
+  height: 6rpx;
+  border-radius: 4rpx;
+  background: #141414;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 主体内容 */
+.order-main  .order-content{
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 30rpx 30rpx 40rpx;
+  margin-top: 20rpx;
+}
+.order-main  .order-content .order-state{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+.order-main  .order-content .order-list{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.order-main  .order-content .order-list image{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 30rpx;
+}
+.order-main  .order-content .order-list .right-text{
+  width: 460rpx;
+}
+.order-main  .order-content .order-list .right-text .title{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 600;
+  line-height: 1;
+  color: #141414;
+}
+.order-main  .order-content .order-list .right-text .price{
+  font-size: 26rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+  margin: 20rpx auto 30rpx;
+}
+.order-main  .order-content .order-list .right-text .des{
+  font-size: 20rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  margin-bottom: 26rpx;
+}
+.order-main  .order-content .order-list .right-text button{
+  width: 136rpx;
+  background-color: transparent;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  text-align: center;
+  line-height: 48rpx;
+  color: #F59359;
+  border: 1px solid #F59359;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.order-main  .order-content .order-list .right-text button::after{
+  border: none;
+}
+.order-main  .order-content .total-count{
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #141414;
+  margin: 40rpx auto 30rpx;
+  text-align: right;
+}
+.order-main  .order-content .total-count text{
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #F59359;
+}
+.order-main  .order-content .btn-group{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.order-main  .order-content .btn-group .dc{
+  width: 160rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background: #F59359;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0 17rpx 0 0;
+  padding: 0;
+}
+.order-main  .order-content .btn-group .dc::after{
+  border: none;
+}
+.order-main  .order-content .btn-group .ca{
+  width: 160rpx;
+  height: 70rpx;
+  border-radius: 8rpx;
+  background: transparent;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height:70rpx;
+  text-align: center;
+  color: #141414;
+  margin: 0 ;
+  padding: 0;
+}
+.order-main  .order-content .btn-group .ca::after{
+  border: 1px solid #141414;
+}
+/* 没有数据 */
+.order-main .nodata{
+  margin: 175rpx auto auto;
+}
+.order-main .nodata image{
+  width: 304rpx;
+  height: 304rpx;
+  margin-bottom: 30rpx;
+}
+.order-main .nodata .text{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  text-align: center;
+}

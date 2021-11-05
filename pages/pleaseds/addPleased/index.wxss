@@ -1,0 +1,145 @@
+/* 方案列表 */
+.add-plea-main{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 120rpx;
+}
+.add-plea-main .nodata{
+  margin: 318rpx auto auto;
+}
+.add-plea-main .nodata image{
+  width: 304rpx;
+  height: 304rpx;
+  margin-bottom: 30rpx;
+}
+.add-plea-main .nodata .text{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 1;
+  color: #141414;
+  text-align: center;
+}
+/* 方案列表 */
+.add-plea-main .item{
+  display: flex;
+  padding: 30rpx;
+  background-color: #FFFFFF;
+  margin-top: 20rpx;
+}
+.add-plea-main .item .l-img{
+  width: 252rpx;
+  height: 252rpx;
+  margin-right: 30rpx;
+}
+.add-plea-main .item .item-text{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.add-plea-main .item .item-text .title{
+  font-size: 30rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  line-height: 45rpx;
+  color: #141414;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  margin-bottom: 40rpx;
+}
+.add-plea-main .item .item-text .dz{
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 1;
+  color: #999999;
+}
+.add-plea-main .item .item-text .dz image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 12rpx;
+}
+.add-plea-main .item .item-text .btn-group{
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+.add-plea-main .item .item-text .btn-group .edit{
+  width: 82rpx;
+  height: 50rpx;
+  background: #F59359;
+  line-height: 50rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 0 10rpx 0 auto;
+}
+.add-plea-main .item .item-text .btn-group .del{
+  width: 82rpx;
+  height: 50rpx;
+  background: #141414;
+  line-height: 50rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 0;
+}
+.add-plea-main .item .item-text .btn-group .edit::after{
+  border: none;
+}
+
+/* 添加方案按钮 */
+.add-plea-btnGroup{
+  box-sizing: border-box;
+  position: fixed;
+  background-color: #FFFFFF;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #EFEFEF;
+}
+
+
+.add-plea-btnGroup button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 610rpx;
+  height: 90rpx;
+  line-height: 1;
+  border-radius: 8rpx;
+  background-color: #141414;
+  font-size: 28rpx;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+}
+.add-plea-btnGroup button::after{
+  border: none;
+}
+.add-plea-btnGroup button image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 15rpx;
+}
+.vant-pop .van-popup{
+  background-color: transparent;
+}

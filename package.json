@@ -1,0 +1,20 @@
+{
+  "name": "mousse",
+  "version": "1.0.0",
+  "description": "美学空间研究院",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.7.2",
+    "wxa-plugin-canvas": "^1.1.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:zhangxiaoguang888/mousse.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

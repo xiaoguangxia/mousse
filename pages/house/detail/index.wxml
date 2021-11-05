@@ -1,0 +1,26 @@
+<!-- 户型库详情 -->
+<view class="house-detail-main">
+  <!-- 轮播图 -->
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}"  bindchange="swiperChange" current="{{currentSwiper}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <swiper-item wx:for="{{background}}" wx:key="*this" class="swp-item">
+        <image src="{{domain+item}}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{background}}" wx:key="*this">
+        <view class="dot{{index == currentSwiper ? ' swpactive' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class="details-main-header">
+    <!-- <image wx:if="{{info.image}}" src="{{domain+info.image}}"></image>
+    <image wx:else src="{{wLink}}/images/house1.png"></image> -->
+    <view class="title">{{info.name}}</view>
+    <view class="des">{{info.description}}</view>
+  </view>
+  <!-- 后台设置富文本内容 -->
+  <view class="content">
+    <rich-text  nodes="{{htmlSnip}}"></rich-text>
+  </view>
+</view>

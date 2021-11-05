@@ -1,0 +1,41 @@
+<!-- 我的订单物流信息 -->
+<view class="order-detail-main">
+  <!-- 基础信息 -->
+  <view class="order-detailT">
+    <view wx:for="{{orderInfo.list}}" wx:key="*this" class="detail">
+      <image wx:if="{{item.goods_image}}" src="{{domain + item.goods_image}}"></image>
+      <image wx:else  src="{{wLink}}/images/plea1.png"></image>
+      <view class="right-text">
+        <view class="title">{{item.goods_name}}</view>
+        <view class="des">
+          <text wx:if="{{item.goods.period}}">货期{{item.goods.period}}天之内；</text>
+          <text wx:if="{{item.goods.color}}">颜色为{{item.goods.color}}；</text>
+          <text wx:if="{{item.goods_sku}}">风格是{{item.goods_sku}}</text></view>
+        <view class="price">￥{{item.goods_price}}<text>X{{item.goods_num}}</text></view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="small-title">订单备注</view>
+    <view class="small-text">{{orderInfo.remark}}</view>
+  </view>
+  <!-- 物流信息 -->
+  <view  class="wl-info">
+    <view wx:if="{{stepsInfo.list.length>0}}" class="title">
+      <text class="t">物流单号</text>
+      <text class="v">{{stepsInfo.number}}</text>
+      <text class="c" bindtap="copyHandle">复制</text>
+    </view>
+    <!-- 物流信息 -->
+    <view wx:if="{{stepsInfo.list.length>0}}" class="wl-info">
+      <view wx:for="{{stepsInfo.list}}" wx:key="*this"  class="chil-info">
+        <view class="yuan"></view>
+        <view class="date">{{item.time}}</view>
+        <view class="text">{{item.status}}</view>
+      </view>
+    </view>
+    <view  wx:else class="nodata">
+      <image  src="{{wLink}}/images/plea-no-data.png"></image>
+      <view class="text">暂无物流信息</view>
+    </view>  
+  </view>
+</view>

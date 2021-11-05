@@ -1,0 +1,66 @@
+<!-- 购物车 -->
+<view class="shopCart-container">
+  <!-- toobar -->
+  <view class="flex-top">
+    <view class="left">
+      <van-checkbox value="{{ checkAll }}" checked-color="#141414" shape="square" bind:change="checkAllChange"></van-checkbox>
+      <text>全选</text>
+    </view>
+    <view wx:if="{{editBool}}" class="right on" bindtap="editShopCart">
+      <text>完成</text>
+    </view>
+    <view wx:else class="right" bindtap="editShopCart">
+      <text>编辑</text>
+    </view>
+  </view>
+  <!--  -->
+  <!-- 无数据 -->
+  <view wx:if="{{list.length==0}}" class="nodata">
+    <image  src="{{wLink}}/images/plea-no-data.png"></image>
+    <view class="text">暂无数据</view>
+  </view>  
+  <!-- 列表 -->
+  <view wx:else class="house-list">
+    <view wx:for="{{list}}" wx:key="*this" class="house-item">
+      <view  class="checkbox-shop">
+        <van-checkbox value="{{ item.bool }}" checked-color="#141414" data-index="{{index}}" data-item="{{item}}" shape="square" bind:change="checkChange"></van-checkbox>
+      </view>
+      <image wx:if="{{item.goods.image}}" class="shopImg" src="{{domain+item.goods.image}}"></image>
+      <image wx:else class="shopImg" src="{{wLink}}/images/house.png"></image>
+      <view class="text">
+        <view class="title">{{item.goods.name}}</view>
+        <view class="des">
+          <text wx:if="{{item.goods.period}}">货期{{item.goods.period}}天之内；</text>
+          <text wx:if="{{item.goods.color}}">颜色为{{item.goods.color}}；</text>
+          <text wx:if="{{item.goods_sku}}">规格是{{item.goods_sku}}</text>
+        </view>
+        <view class="mone-ico">
+          <text wx:if="{{item.goods.saleswitch==1}}">￥{{item.goods.sale_price}}</text>
+          <text wx:else>￥{{item.goods.price}}</text>
+          <view class="jian {{num<=1?'on':''}}"  data-id="{{item.id}}" data-item="{{item}}" data-index="{{index}}" bindtap="removeNum">
+            <image   src="{{wLink}}/images/jian.png"></image>
+          </view>
+          <view class="num">{{item.goods_num}}</view>
+          <view class="jia" data-id="{{item.id}}" data-index="{{index}}"  data-item="{{item}}" bindtap="addNum">
+            <image   src="{{wLink}}/images/jia.png"></image>
+          </view>
+          <van-icon  bindtap="deleteShop"  size="54rpx"  class="del" name="delete-o" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部工具栏 -->
+  <!-- 编辑 -->
+  <view wx:if="{{editBool}}" class="bott-toolbar">
+    <button catchtap="outOrder" class="dcqd">导出清单</button>
+    <button catchtap="delOrder"  class="js red">删除({{count}})</button>
+  </view>
+  <view wx:else class="bott-toolbar">
+    <view class="total-text">
+      合计<text>￥{{totalPrice}}</text>
+    </view>
+    <button catchtap="outOrder" class="dcqd">导出清单</button>
+    <button catchtap="toSaveOrder" class="js">结算({{count}})</button>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

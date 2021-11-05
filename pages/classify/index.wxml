@@ -1,0 +1,43 @@
+<!-- 分类 -->
+<view class="classify-main">
+  <view class="search-box">
+    <view class="inp">
+      <image src="{{wLink}}/images/search-icon.png"></image>
+      <input class="input" value="{{keyword}}" bindinput="inpuChange"  placeholder="输入您想要的商品"/>
+    </view>
+    <text class="search-text" bindtap="toSearchPage">搜索</text>
+  </view>
+  <!-- 大分类 固定四个空间-->
+  <view class="type-box">
+    <scroll-view scroll-x="true" class="top-type-scroll">
+      <view wx:for="{{typeArr}}"   data-item="{{item}}"  bindtap="toBanGoodsList" wx:key="index" class="type-item">
+        <image wx:if="{{item.icon}}" src="{{domain + item.icon}}"></image>
+        <image wx:else src="{{wLink}}/images/fa-icon2.png"></image>
+        <view class="text">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 左侧空间 -->
+  <view class="goods-box">
+    <scroll-view scroll-y="true" class="tab-head">
+      <view wx:for="{{spaceList}}"  data-item="{{item}}" bindtap="checkType" wx:key="index"  class="item-text {{item.id==activeType?'on':''}}">
+        <view wx:if="{{item.id==activeType}}" class="left-bar"></view>
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <!-- 商品 -->
+    <view class="tab-content">
+      <scroll-view scroll-y="true" style="height: 740rpx;">
+        <image wx:if="{{banLink}}"  class="fban" src="{{domain +banLink}}"></image>
+        <image wx:else class="fban" src="{{wLink}}/images/classy-ban.png"></image>
+        <view class="flex-classfy">
+          <view wx:for="{{list}}"  wx:key="index" data-item="{{item}}"  bindtap="toGoodsList" class="child">
+            <image wx:if="{{item.image}}" mode="aspectFit" src="{{domain+item.image}}"></image>
+            <image wx:else src="{{wLink}}/images/classf1.png"></image>
+            <view class="clssfy-text">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
