@@ -58,7 +58,7 @@ Page({
       
       let typeList = that.data.typeList;
       that.setData({
-        banLink:rep.data[0].image,
+        banLink:'/wechat_img/fg/banner.jpg',
         spaceList:[...typeList,...rep.data],
         typeArr:arr
       });
@@ -92,6 +92,7 @@ Page({
         pid:0
       }, (rep) => {
         that.setData({
+          banLink:'/wechat_img/fg/banner.jpg',
           list:rep.data
         });
       })
